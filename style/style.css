@@ -10,6 +10,11 @@
     height: 100%;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    
+}
+
+.sections{
+    color: aliceblue;
 }
 .banner{
     width: 100%;
@@ -58,3 +63,44 @@ span{
     transition: .5s;
 }
 
+.home{
+    width: 100%;
+    padding: 100px 0px;
+    background-image: linear-gradient(#0A0907,#070707);
+}
+
+
+
+.overview{
+    width: 100%;
+    padding: 100px 0px;
+    background-image: linear-gradient(#0A0907,#070707);
+}
+
+
+.target-and-indicators{
+    width: 100%;
+    padding: 100px 0px;
+    background-image: linear-gradient(#0A0907,#070707);
+}
+
+
+.progress-info{
+    width: 100%;
+    padding: 100px 0px;
+    background-image: linear-gradient(#0A0907,#070707);
+}
+
+
+.article{
+    width: 100%;
+    padding: 100px 0px;
+    background-image: linear-gradient(#0A0907,#070707);
+}
+
+
+.about-us{
+    width: 100%;
+    padding: 100px 0px;
+    background-image: linear-gradient(#0A0907,#070707);
+}
