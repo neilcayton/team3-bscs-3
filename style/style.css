@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.all{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(/images/demoBg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    padding-left: 8%;
+    padding-right: 8%;
+    background-color: rgba(0,0,0,0.75);
+ 
+}
+.logo{
+    color: aliceblue;
+    font-size: 70px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+span{
+    color: orange;
+}
+
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+.navbar ul  li a{
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.navbar ul  li a:hover{
+    color: orange;
+    transition: .5s;
+}
+
