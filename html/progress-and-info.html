@@ -5,28 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Progress and Info</title>
     <link rel="stylesheet" href="/style/progress-and-info.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <!-- Needs citations from the original page -->
 
 <body>
 <div class="progress-and-info">
-    <!-- Heading Block -->
-    <!-- Not yet final, can be changed after heading block for all pages are finalized -->
-    <div class="heading-block">
-        <div class="image">
-            <img src="/images/SDG-logo.png" alt="Image 1" width="100px" height="100px">
-        </div>
-        <div class="title">
-            <h2>Progress and Info</h2>
-        </div>
-    </div>
-    <div class="scroll-container">
-        <div class="card-container">
-            <!-- Progress Overview -->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-sm-12 mb-3">
             <div class="target-card">
                 <div class="card-body">
-                    <div class="goal-header">
+                    <div class="goal-header d-flex align-items-start">
                         <div>
                             <h4 class="goal-number">2024: Yearly Overview</h4>
                             <p class="goal-text">More than half the world’s population currently reside in cities. However, cities are grappling with a multitude of complex issues, 
@@ -41,10 +32,16 @@
                 </div>
             </div>
 
-            <!-- 11.1 -->
+        </div>
+
+    </div>
+
+    <div class="row">
+ 
+        <div class="col-sm-6 mb-3">
             <div class="target-card">
                 <div class="card-body">
-                    <div class="goal-header">
+                    <div class="goal-header d-flex align-items-start">
                         <img class="goal-logo" src="/images/goal-11.png" alt="Goal Logo">
                         <div>
                             <span class="target">Target</span>
@@ -64,11 +61,13 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- 11.2 -->
+
+        <div class="col-sm-6 mb-3">
             <div class="target-card">
                 <div class="card-body">
-                    <div class="goal-header">
+                    <div class="goal-header d-flex align-items-start">
                         <img class="goal-logo" src="/images/goal-11.png" alt="Goal Logo">
                         <div>
                             <span class="target">Target</span>
@@ -84,108 +83,64 @@
                             Urgent investments are needed to expand access, especially in impoverished urban areas in developed countries.</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- 11.3 -->
-            <div class="target-card">
-                <div class="card-body">
-                    <div class="goal-header">
-                        <img class="goal-logo" src="/images/goal-11.png" alt="Goal Logo">
-                        <div>
-                            <span class="target">Target</span>
-                            <h4 class="goal-number">11.3</h4>
-                            <p class="goal-text">By 2030, enhance inclusive and sustainable urbanization and capacity for participatory, integrated and sustainable human settlement planning and management in all countries.</p>
-                        </div>
-                    </div>
-                    <input type="checkbox" id="progress-toggle-4" class="progress-toggle">
-                    <label for="progress-toggle-4" class="progress-button">Progress ▼</label>
-                    <div class="progress-content">
-                        <p>Data from 1217 cities across 185 countries shows that cities are sprawling faster than they are densifying. Between 2000 and 2020, cities expanded up to 3.7 
-                            times faster than they densified. Globally, sprawl averaged 5.6% annually, while densification was only 1.5%. Despite a slight decline in sprawl rates from 2010 
-                            to 2020, they still exceeded densification rates, displacing ecologically valuable lands. Balancing people, prosperity, and the planet by 2030 requires concerted 
-                            efforts to curb urban sprawl locally, sub-nationally, and nationally.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 11.5 -->
-            <div class="target-card">
-                <div class="card-body">
-                    <div class="goal-header">
-                        <img class="goal-logo" src="/images/goal-11.png" alt="Goal Logo">
-                        <div>
-                            <span class="target">Target</span>
-                            <h4 class="goal-number">11.5</h4>
-                            <p class="goal-text">By 2030, significantly reduce the number of deaths and the number of people affected and substantially decrease the direct economic losses relative to global gross domestic product caused by disasters, including water-related disasters, with a focus on protecting the poor and people in vulnerable situations.</p>
-                        </div>
-                    </div>
-                    <input type="checkbox" id="progress-toggle-5" class="progress-toggle">
-                    <label for="progress-toggle-5" class="progress-button">Progress ▼</label>
-                    <div class="progress-content">
-                        <p>On average, 104,049 critical infrastructure units and facilities were destroyed or damaged by disasters annually from 2015 to 2022. Furthermore, disasters disrupted over 1.6 million basic services, including educational and health services, each year.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 11.6 -->
-            <div class="target-card">
-                <div class="card-body">
-                    <div class="goal-header">
-                        <img class="goal-logo" src="/images/goal-11.png" alt="Goal Logo">
-                        <div>
-                            <span class="target">Target</span>
-                            <h4 class="goal-number">11.6</h4>
-                            <p class="goal-text">By 2030, reduce the adverse per capita environmental impact of cities, including by paying special attention to air quality and municipal and other waste management.</p>
-                        </div>
-                    </div>
-                    <input type="checkbox" id="progress-toggle-6" class="progress-toggle">
-                    <label for="progress-toggle-6" class="progress-button">Progress ▼</label>
-                    <div class="progress-content">
-                        <p>A comparison of air pollution five-year average before and after the development of the SDGs showed a significant decrease of 9% in fine particulate matter global levels and current alignment with the WHO Air Quality Guideline (AQG) Interim Target 1 value of 35 ug/m3.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 11.7 -->
-            <div class="target-card">
-                <div class="card-body">
-                    <div class="goal-header">
-                        <img class="goal-logo" src="/images/goal-11.png" alt="Goal Logo">
-                        <div>
-                            <span class="target">Target</span>
-                            <h4 class="goal-number">11.7</h4>
-                            <p class="goal-text">By 2030, provide universal access to safe, inclusive and accessible, green and public spaces, in particular for women and children, older persons and persons with disabilities.</p>
-                        </div>
-                    </div>
-                    <input type="checkbox" id="progress-toggle-7" class="progress-toggle">
-                    <label for="progress-toggle-7" class="progress-button">Progress ▼</label>
-                    <div class="progress-content">
-                        <p>Data from 1,365 cities across 187 countries reveals that access to open public spaces is notably deficient in LDCs, where fewer than 3 in 10 people can conveniently reach such areas. Conversely, in high-performing regions like Australia and New Zealand, North America, and Europe, approximately 6 to 7 out of 10 urban residents enjoy convenient access to open public spaces, highlighting the prevalent global challenge.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 11.b -->
-            <div class="target-card">
-                <div class="card-body">
-                    <div class="goal-header">
-                        <img class="goal-logo" src="/images/goal-11.png" alt="Goal Logo">
-                        <div>
-                            <span class="target">Target</span>
-                            <h4 class="goal-number">11.b</h4>
-                            <p class="goal-text">By 2020, substantially increase the number of cities and human settlements adopting and implementing integrated policies and plans towards inclusion, resource efficiency, mitigation and adaptation to climate change, resilience to disasters, and develop and implement, in line with the Sendai Framework for Disaster Risk Reduction 2015-2030, holistic disaster risk management at all levels.</p>
-                        </div>
-                    </div>
-                    <input type="checkbox" id="progress-toggle-8" class="progress-toggle">
-                    <label for="progress-toggle-8" class="progress-button">Progress ▼</label>
-                    <div class="progress-content">
-                        <p>In 2023, local-level risk governance has improved in recent years, with 106 countries cumulatively reporting having local disaster risk reduction strategies in place and in line with national strategies. On average, 72% of the local governments in reporting countries have specified having local disaster risk reduction strategies.</p>
-                    </div>
-                </div>
             </div>
 
         </div>
+
+     <!-- 11.3 -->
+     <div class="col-sm-6 mb-3">    
+        <div class="target-card">
+            <div class="card-body">
+                <div class="goal-header d-flex align-items-start">
+                    <img class="goal-logo" src="/images/goal-11.png" alt="Goal Logo">
+                    <div>
+                        <span class="target">Target</span>
+                        <h4 class="goal-number">11.3</h4>
+                        <p class="goal-text">By 2030, enhance inclusive and sustainable urbanization and capacity for participatory, integrated and sustainable human settlement planning and management in all countries.</p>
+                    </div>
+                </div>
+                <input type="checkbox" id="progress-toggle-4" class="progress-toggle">
+                <label for="progress-toggle-4" class="progress-button">Progress ▼</label>
+                <div class="progress-content">
+                    <p>Data from 1217 cities across 185 countries shows that cities are sprawling faster than they are densifying. Between 2000 and 2020, cities expanded up to 3.7 
+                        times faster than they densified. Globally, sprawl averaged 5.6% annually, while densification was only 1.5%. Despite a slight decline in sprawl rates from 2010 
+                        to 2020, they still exceeded densification rates, displacing ecologically valuable lands. Balancing people, prosperity, and the planet by 2030 requires concerted 
+                        efforts to curb urban sprawl locally, sub-nationally, and nationally.</p>
+                </div>
+            </div>
     </div>
 </div>
+    <!-- 11.5 -->
+
+    <div class="col-sm-6 mb-3">
+        <div class="target-card">
+            <div class="card-body">
+                <div class="goal-header d-flex align-items-start">
+                    <img class="goal-logo" src="/images/goal-11.png" alt="Goal Logo">
+                    <div>
+                        <span class="target">Target</span>
+                        <h4 class="goal-number">11.5</h4>
+                        <p class="goal-text">By 2030, significantly reduce the number of deaths and the number of people affected and substantially decrease the direct economic losses relative to global gross domestic product caused by disasters, including water-related disasters, with a focus on protecting the poor and people in vulnerable situations.</p>
+                    </div>
+                </div>
+                <input type="checkbox" id="progress-toggle-5" class="progress-toggle">
+                <label for="progress-toggle-5" class="progress-button">Progress ▼</label>
+                <div class="progress-content">
+                    <p>On average, 104,049 critical infrastructure units and facilities were destroyed or damaged by disasters annually from 2015 to 2022. Furthermore, disasters disrupted over 1.6 million basic services, including educational and health services, each year.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+    </div>
+</div>
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9jRl21FCt4+L4O54T7L2e6qZZP5u9K7S6cfKBy/p7F2gjcS57F6" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-c8n6+J7twwZBR7AoHBp7lGkzFAu9r7Ao2C72w8gZbF8h7g9d4E1J0FfqeE+6P9F8" crossorigin="anonymous"></script>
+
 </body>
 </html>
