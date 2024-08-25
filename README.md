@@ -1,4 +1,3 @@
-Here's a sample README file for your static webpage:
 
 ---
 
@@ -69,6 +68,4 @@ Team3_Website/
 - **Team 3:** For the design and development of the webpage content.
 - **SDG Logos:** For the icons and logos used throughout the page.
 
----
 
-Feel free to modify the content based on any additional information or specific details you'd like to include.
