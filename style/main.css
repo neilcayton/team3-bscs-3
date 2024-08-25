@@ -10,11 +10,8 @@
 }
 
 body{
-    height: 100vh;
+    /* height: 100vh; */
     background: var(--body-color);
-}
-
-.all {
     width: 100%;
     height: 100%;
     display: flex;
@@ -23,26 +20,27 @@ body{
     scroll-behavior: smooth;
 }
 
-.sections .close{
-    margin-left: 100px ;
+
+.content {
+    padding-left: 300px;
     flex: 1;
-    overflow: hidden;
-    margin-left: 0;
+    overflow-y: auto; 
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .sections {
-    margin-left: 300px ;
-    flex: 1;
-    overflow: hidden;
+    /* padding: 20px; */
+    height: 100vh;
+    
 }
 
-.banner {
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(/team3-bscs-3/images/demoBg.jpg);
-    background-size: cover;
-    background-position: center;
+.sections section {
+    margin-bottom: 20px;
+    overflow-y: hidden; 
 }
+
 
 :root {
     --body-color: #e4e9f7;
@@ -85,7 +83,7 @@ body{
     top: 0;
     left: 0;
     width: 300px;
-    height: 100%;
+    height: 100vh;
     padding: 20px 14px;
     background: var(--sidebar-color);
     transition: var(--tran-03);
@@ -207,78 +205,13 @@ body{
 
 }
 
-.iframe-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    padding: 0;
-}
 
-.iframe-container iframe {
+iframe {
+    overflow-y: hidden;
     width: 100%;
     height: 100%; 
     border: none;
-}
 
-.article {
-    padding: 0; 
-    height: 100vh; 
-    overflow: hidden; /* Prevent scrollbars */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.article iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    top: 100%; /* Position below the button by default */
-    left: 0;
-    overflow-y: auto; /* Prevent the content from overflowing */
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
 }
 
 
@@ -324,17 +257,13 @@ body{
     .sections {
         margin-left: 0;
         margin-top: 60px;
+        height: 100vh;
+    }
+    .iframe-container {
+        height: auto; /* Adjust height based on content */
     }
 
-    .iframe-container,
-    .article {
-        padding: 0;
-        height: auto;
-        overflow: visible;
-    }
-
-    .iframe-container iframe,
-    .article iframe {
+    .iframe-container iframe {
         height: auto;
         min-height: 300px;
     }
