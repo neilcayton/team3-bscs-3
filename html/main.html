@@ -7,36 +7,41 @@
     <title>Team 3</title>
     <link type="text/css" rel="stylesheet" href="/style/main.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="/images/Team3-logo.png">
 </head>
 <body>
-                <!-- Navigation bar --> 
-                <nav class="navbar close"> 
 
+    <input type="checkbox" class="toggle" id="nav-toggle">
+    <label for="nav-toggle" class="toggle-btn"><i class='bx bx-chevron-right'></i></>
+    <p class="edge">HIHOO</p>
+    </label>
+        
+                <!-- Navigation bar --> 
+                <nav class="navbar "> 
+                    <input type="checkbox" class="toggle" id="nav-toggle">
+                    <label for="nav-toggle" class="toggle-btn"><i class='bx bx-chevron-right'></i></>
+                    <p class="edge">HIHOO</p>
+                    </label>
                     <header>
                         <div class="image-text">
                             <span class="image">
                                 <img src="/images/Team3-logo.png" alt="">
                             </span>
-    
-                            
+                        
                             <div class="text header-text">
                                 <span class="name">Team 3</span>
                                 <span class="class">Web Dev</span>
                             </div>
-                        </div>
-                        <button type="radio"><i class='bx bx-chevron-right toggle'></i></button>
-                
-                        <!-- <i class='bx bx-right-arrow toggle'></i> -->
+                        </div>                
                     </header>
     
                     
                     <div class="menu-bar">
                         <div class="menu">
-
                             <ul class="menu-links">
                                 <li class="nav-links"><a href="#home-id"><i class='bx bx-home-circle icons' ></i><span class="text nav-text">Home</span></a></li>
                                 <li class="nav-links"><a href="#target-id"><i class='bx bx-target-lock icons' ></i><span class="text nav-text">Target and Indicators</span></a></li>
-                                <li class="nav-links"><a href="#progress-info-id"><i class='bx bx-loader-alt icons' ></i><span class="text nav-text">Progress  and Information</span></a></li>
+                                <li class="nav-links"><a href="#progress-info-id"><i class='bx bx-loader-alt icons' ></i><span class="text nav-text">Progress and Information</span></a></li>
                                 <li class="nav-links"><a href="#articles-id"><i class='bx bx-news icons' ></i><span class="text nav-text">Articles</span></a></li>
                                 <li class="nav-links"><a href="#about-id"><i class='bx bx-info-square icons' ></i><span class="text nav-text">About us</span></a></li>
                             </ul>
@@ -80,14 +85,7 @@ iframes.forEach((iframe) => {
   };
 });
 
-        const toggle = document.querySelector('.navbar .toggle');
-        const navbar = document.querySelector('.navbar');
-        const content = document.querySelector('.content');
 
-        toggle.addEventListener('click', () => {
-            navbar.classList.toggle('close');
-            content.classList.toggle('shift');
-        });
     </script>
     
 </body>

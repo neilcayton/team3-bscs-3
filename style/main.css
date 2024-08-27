@@ -28,6 +28,7 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: column;
+    transition: padding-left 0.3s ease;
 }
 
 .sections {
@@ -44,8 +45,8 @@ body{
 
 :root {
     --body-color: #e4e9f7;
-    --sidebar-color: rgb(134, 134, 202);
-    --primary-color: rgb(89, 89, 150);
+    --sidebar-color: rgb(232, 211, 140);
+    --primary-color: rgb(85, 67, 35);
     --toggle-color: #DDD;
     --text-color: #707070;
     --text--prime-color: rgba(207, 189, 245, 0.5):
@@ -59,7 +60,7 @@ body{
 
 
 .navbar .text{
-    font-size: 19px;
+    font-size: 16px;
     font-weight: 400;
     transition: var(--tran-04);
     white-space: nowrap;
@@ -79,22 +80,16 @@ body{
 /* ====taas=== */
 
 .navbar {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 300px;
     height: 100vh;
     padding: 20px 14px;
     background: var(--sidebar-color);
-    transition: var(--tran-03);
-}
-.navbar.close{
-    width: 88px;
+    transition: width 0.3s ease;
 }
 
-.navbar.close .text{
-    opacity: 0;
-}
 
 .navbar li{
     height: 50px;
@@ -122,7 +117,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* position: relative; */
 }
 .navbar header .image-text {
     display: flex;
@@ -147,38 +141,80 @@ body{
 }
 
 
-.navbar header .toggle{
+#nav-toggle:hover +.toggle-btn {
+    color: rgba(255, 255, 255, 1);
+    padding: 5px;
+    box-shadow: 0 5px 15px rgba(92, 160, 182, 0.4);
+}
+
+#nav-toggle:checked + .toggle-btn .edge{
+    font-size: large;
+    font-weight: 100;
+}
+
+
+#nav-toggle:checked + .toggle-btn .navbar {
+    transition: var(--tran-03);
+    font-size: 90px;
+}
+
+#nav-toggle:checked ~ .navbar {
+    transition: var(--tran-03);
+    width: 88px;
+}
+
+
+#nav-toggle:not(:checked) ~ .navbar {
+    transition: var(--tran-03);
+    width: 300px;
+}
+
+#nav-toggle:checked ~ .content {
+    transition: var(--tran-03);
+    padding-left: 88px;
+}
+
+#nav-toggle:not(:checked) ~ .content {
+    transition: var(--tran-03);
+    padding-left: 300px;
+}
+
+#nav-toggle:checked ~ .navbar .text{
+    transition: var(--tran-03);
+    opacity: 0;
+}
+
+
+#nav-toggle:checked ~ .navbar .toggle-btn {
+    
+}
+
+#nav-toggle {
+    display: block;
+}
+
+.toggle {
+    display: none;
+}
+
+.navbar .toggle-btn{
     position: absolute;
-    top: 100%;
-    right: -35px;
-    height: 35px;
-    width: 500px;
-    transform: translateY(2%);
+    right: 130px;
+    height: 50px;
+    width: 50px;
+    transform: translateY(800%);
     display: flex;
     background: black;
     align-items: center;
     justify-content: center;
     justify-items: center;
     border-radius: 10%;
+    cursor: pointer;
     color: var(--sidebar-color);
-    font-size: 22px;
+    font-size: 30px;
+    transition: var(--tran-03);
 }
 
-.sidebar .search-box {
-    background: var(--text--prime-color);
-}
-
-.search-box input{
-
-    height: 100%;
-    width: 100%;
-    outline: none;
-    border: none;
-    background: black;
-    border-radius: 6px;
-    padding-left: 10px;
-
-}
 .navbar li a {
     text-decoration: none;
     align-items: center;
