@@ -51,7 +51,7 @@ body{
     --text-color: #707070;
     --text--prime-color: rgba(207, 189, 245, 0.5):
 
-    --tran-03: all 0.2s ease;
+    --tran-01: all 0.1s ease;
     --tran-03: all 0.3s ease;
     --tran-04: all 0.4s ease;
     --tran-05: all 0.5s ease;
@@ -73,7 +73,7 @@ body{
 
 
 .navbar .image {
-    min-width: 95px;
+    min-width: 95px; 
     display: flex;
     align-items: center;
 }
@@ -147,10 +147,10 @@ body{
     box-shadow: 0 5px 15px rgba(92, 160, 182, 0.4);
 }
 
-#nav-toggle:checked + .toggle-btn .edge{
+/* #nav-toggle:checked + .toggle-btn .edge{
     font-size: large;
     font-weight: 100;
-}
+} */
 
 
 #nav-toggle:checked + .toggle-btn .navbar {
@@ -170,7 +170,7 @@ body{
 }
 
 #nav-toggle:checked ~ .content {
-    transition: var(--tran-03);
+    transition: var(--tran);
     padding-left: 88px;
 }
 
@@ -180,17 +180,17 @@ body{
 }
 
 #nav-toggle:checked ~ .navbar .text{
-    transition: var(--tran-03);
+    transition: var(--tran-1);
     opacity: 0;
 }
 
 
 #nav-toggle:checked ~ .navbar .toggle-btn {
-    
+    right: 20px;
 }
 
 #nav-toggle {
-    display: block;
+    display: none;
 }
 
 .toggle {
@@ -198,6 +198,7 @@ body{
 }
 
 .navbar .toggle-btn{
+    caret-color: transparent; /* for blinking cursor (|) ganito example */
     position: absolute;
     right: 130px;
     height: 50px;
