@@ -1,5 +1,6 @@
 :root {
     --trans-1: 1.5s ease;
+    --scroll-width: 10px;
 }
 
 body {
@@ -9,23 +10,38 @@ body {
     overflow: hidden;
 }
 
-.safe {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
 .targets-container {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 20px;
     padding: 20px;
-    position: absolute;
-    /* left: 50%; */
-    transform: translateX(-50%);
-    transition: transform var(--trans-1);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    transition: scrollbar-color 0.3s ease;
+}
+
+.targets-container::-webkit-scrollbar {
+    width: var(--scroll-width);
+    height: var(--scroll-width);
+}
+
+.targets-container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+/* 
+.targets-container:hover {
+    scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
+} */
+
+.targets-container:hover:not(:has(.target-card:hover)) {
+    scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
+}
+
+.targets-container:hover:not(:has(.target-card:hover))::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .target-card {
@@ -40,20 +56,7 @@ body {
     transition: 0.5s ease-in-out smooth;
 }
 
-.left-scroll, 
-.right-scroll {
-    position: absolute;
-    top: 0;
-    width: 20%;
-    height: 100%;
-    cursor: pointer;
-    z-index: 10;
-    /* backdrop-filter: blur(8px); */
-    /* -webkit-backdrop-filter: blur(8px); */
-    /* background-color: rgba(207, 189, 245, 0.5); */
-    transition: opacity 0.3s ease;
-    opacity: 0;
-}
+
 
 .left-scroll {
     left: 0;
@@ -63,20 +66,41 @@ body {
     right: 0;
 }
 
-.left-scroll:hover,
-.right-scroll:hover {
+/* .left-scroll-container:hover {
+    background-color: #ff0000;
     opacity: 1;
 }
 
-.left-scroll:hover ~ .targets-container {
-    transform: translateX(calc(-50% + 40%));
+
+.right-scroll-container:hover {
+    background-color: #4a90e2;
+    opacity: 1;
+} */
+
+/* .left-scroll-container:hover  ~ .targets-container {
+    overflow-y: scroll;
+    transform: translateX(1000px);
+
 }
 
-.right-scroll:hover ~ .targets-container {
-    transform: translateX(calc(-50% - 40%));
+
+.right-scroll-container:hover ~ .targets-container {
+    
+    transform: translateX(-1000px);
+} */
+
+
+.left-scroll-container:hover ~ .targets-container {
+    transform: translateX(var(--scroll-amount));
 }
+
+.right-scroll-container:hover ~ .targets-container {
+    transform: translateX(calc(-1 * var(--scroll-amount)));
+}
+
 
 .target-card:hover {
+    background-color: bisque;
     font-size: 20px;
     width: 400px;
     height: 220px;

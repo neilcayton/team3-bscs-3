@@ -6,11 +6,17 @@
 body, html {
     margin: 0;
     padding: 0;
+    overflow-y: auto;
     height: 100%;
     display: flex;
     flex-direction: column;
     background-color: transparent !important; 
     font-family: Arial, sans-serif;
+    /* scrollbar-width: thin; */
+}
+
+html::-webkit-scrollbar {
+    display: none;
 }
 
 /* Heading block */
@@ -28,10 +34,15 @@ body, html {
 /* Container for scrolling */
 .scroll-container {
     width: 100%;
-    height: 100vh; 
+    height: 100%; 
     overflow-y: auto;
     padding: 20px;
     box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
 }
 
 /* Container for the cards */
@@ -50,6 +61,7 @@ body, html {
     background-color: bisque;
     margin-bottom: 20px;
     padding: 20px;
+   
 }
 
 /* Card body styling */
