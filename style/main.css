@@ -52,6 +52,7 @@ body{
     --text--prime-color: rgba(207, 189, 245, 0.5):
 
     --tran-01: all 0.1s ease;
+    --tran-02: all 0.2s smooth;
     --tran-03: all 0.3s ease;
     --tran-04: all 0.4s ease;
     --tran-05: all 0.5s ease;
@@ -143,39 +144,35 @@ body{
 
 #nav-toggle:hover +.toggle-btn {
     color: rgba(255, 255, 255, 1);
-    padding: 5px;
+    /* padding: 5px; */
     box-shadow: 0 5px 15px rgba(92, 160, 182, 0.4);
 }
 
-/* #nav-toggle:checked + .toggle-btn .edge{
-    font-size: large;
-    font-weight: 100;
-} */
-
-
 #nav-toggle:checked + .toggle-btn .navbar {
-    transition: var(--tran-03);
+    transition: var(--tran-05);
     font-size: 90px;
 }
 
+
+
 #nav-toggle:checked ~ .navbar {
-    transition: var(--tran-03);
+    transition: var(--tran-05);
     width: 88px;
 }
 
 
 #nav-toggle:not(:checked) ~ .navbar {
-    transition: var(--tran-03);
+    transition: var(--tran-05);
     width: 300px;
 }
 
 #nav-toggle:checked ~ .content {
-    transition: var(--tran);
+    transition: var(--tran-05);
     padding-left: 88px;
 }
 
 #nav-toggle:not(:checked) ~ .content {
-    transition: var(--tran-03);
+    transition: var(--tran-05);
     padding-left: 300px;
 }
 /* test */
@@ -184,10 +181,17 @@ body{
     opacity: 0;
 }
 
+#nav-toggle:not(:checked) ~ .navbar .text{
+    transition: var(--tran-2);
+    opacity: 1;
+}
 
 #nav-toggle:checked ~ .navbar .toggle-btn {
     right: 20px;
+    transition: var(--tran-5);
 }
+
+
 
 #nav-toggle {
     display: none;
@@ -203,7 +207,7 @@ body{
     right: 130px;
     height: 50px;
     width: 50px;
-    transform: translateY(800%);
+    transform: translateY(900%);
     display: flex;
     background: black;
     align-items: center;
@@ -213,7 +217,7 @@ body{
     cursor: pointer;
     color: var(--sidebar-color);
     font-size: 30px;
-    transition: var(--tran-03);
+    transition: var(--tran-5);
 }
 
 .navbar li a {

@@ -1,32 +1,116 @@
+:root {
+    --trans-1: 1.5s ease;
+}
+
 body {
     font-family: Arial, sans-serif;
+    background-color: transparent;
     margin: 0;
-    padding: 0;
+    overflow: hidden;
 }
-.target-and-indicators {
-    padding: 20px;
-}
-.target-and-indicators table {
+
+.safe {
+    position: absolute;
+    display: flex;
     width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+    height: 100vh;
+    overflow: hidden;
 }
-.target-and-indicators td {
-    padding: 10px;
+
+.targets-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    position: absolute;
+    /* left: 50%; */
+    transform: translateX(-50%);
+    transition: transform var(--trans-1);
 }
-.target-and-indicators img {
-    max-width: 100%;
-    height: auto;
+
+.target-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 350px;
+    flex-shrink: 0;
+    transition: 0.5s ease-in-out smooth;
 }
-h2 {
-    font-size: 24px;
-    color: #333;
+
+.left-scroll, 
+.right-scroll {
+    position: absolute;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 10;
+    /* backdrop-filter: blur(8px); */
+    /* -webkit-backdrop-filter: blur(8px); */
+    /* background-color: rgba(207, 189, 245, 0.5); */
+    transition: opacity 0.3s ease;
+    opacity: 0;
 }
-h4 {
+
+.left-scroll {
+    left: 0;
+}
+
+.right-scroll {
+    right: 0;
+}
+
+.left-scroll:hover,
+.right-scroll:hover {
+    opacity: 1;
+}
+
+.left-scroll:hover ~ .targets-container {
+    transform: translateX(calc(-50% + 40%));
+}
+
+.right-scroll:hover ~ .targets-container {
+    transform: translateX(calc(-50% - 40%));
+}
+
+.target-card:hover {
     font-size: 20px;
+    width: 400px;
+    height: 220px;
+    transform: scale(5.05);
+    transform: translateY(-5px);
+}
+
+.target-card:hover h4 , i{
+
+    font-size: 40px;
+  
+}
+
+/* .target-card:hover i {
+    font-size: ;
+  
+} */
+
+.target-content {
+    margin-left: 15px;
+}
+
+.target-content h4 {
+    font-size: 1.2em;
     color: #333;
 }
-p {
-    font-size: 16px;
+
+.target-content p {
     color: #666;
+    font-size: 0.95em;
+    margin-top: 5px;
+}
+
+i {
+    font-size: 2em;
+    color: #4a90e2;
 }
