@@ -16,14 +16,15 @@ body::-webkit-scrollbar {
 
 .main-container {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    /* justify-items: center; */
     align-items: center;
+    display: flex;
+    flex-direction: column;
 
 }
 h3 {
     font-size: 1.5rem;
+    margin-bottom: 10%;
 }
 
 h3:hover{
@@ -34,25 +35,58 @@ h3:hover{
 
 .main-container > p {
     margin-left: 30px;
+    position: fixed;
+    
 }
 
-.main-container > .data-wrap {
-    /* flex: 3; */
-    position: relative;
+
+
+.data-wrap {
+    display: flex;
     width: 650px;
     height: 400px;
     padding: 20px;
-    /* border-radius: 2%; */
-    /* justify-items: center; */
+    justify-content: center;
     align-items: center;
-    border-color: black;
-    border: 2px;
-    border-style: groove;
-    background-color:  rgb(57, 54, 54);
-    /* box-shadow: 0 5px 15px rgb(12, 8, 1) ; */
+    border: 2px groove black;
+    background-color: rgb(57, 54, 54);
+    position: relative;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
 }
 
-.main-container > .data-wrap:hover {
-    
+.data-wrap > .table,
+.data-wrap > .chart {
+    position: absolute;
+    width: 40rem;
+    height: 50rem;
+    transition: 0.3s ease-in-out;
+}
+
+.data-wrap > .table {
+    display: none;
+}
+
+.data-wrap > .chart {
+    display: block;
+}
+
+.data-wrap:hover {
+    width: 100%;
+    height: 360px;
+    background-color: rgb(216, 116, 65);
+}
+
+.data-wrap:hover .chart {
+    transform: translateX(-65%);
+    width: 30rem;
+    height: 30rem;
+}
+
+.data-wrap:hover .table {
+    display: block;
+    transform: translateX(45%);
+    width: 40rem;
+    height: 30rem;
 }
 
