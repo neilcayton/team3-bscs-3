@@ -34,13 +34,7 @@ body{
     flex-direction: column;
     transition: padding-left 0.3s ease;
 }
-/* 
-.sections {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    
-} */
+
 
 .sections section {
     align-self: stretch;
