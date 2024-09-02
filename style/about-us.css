@@ -1,66 +1,101 @@
 body {
-    background-color: #000;
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    margin: 0;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+}
+.inner-conatainter{
+    display: flex;
+    flex-direction: row;
+}
+.title{
+    margin-top: 1%;
+    margin-left: 2.3%;
+}
+.title h2:hover{
+    animation: fadeIn 1s;
+    color: rgb(18, 89, 156);
+}
+.tag{
+    font-size: large;
+    cursor: pointer;
 }
 
-
-.header-container {
-    /* styles for the header container */
+ .content{
+    display:none;
 }
 
-.logo-container {
-    display: inline-block;
-    vertical-align: middle; /* add vertical alignment to the logo */
+.section-Container{
+    padding: 2%;
+    width: 50%;
+    margin-top: 1%;
+    margin-right: 2.3%;
+    margin-left: 2.3%;
+    margin-inline-start: 1%;
+    text-align: center;
+    background-color: bisque;
+    box-shadow: 5px 5px lightblue;
+    border-radius: 15px; /* Rounded edges */
+    transition: background-color 1s, box-shadow 1s; 
 }
 
-.title-container {
-    display: inline-block;
-    vertical-align: middle; /* add vertical alignment to the title */
-    color: #ffffff;
+.section-Container:hover{
+    background-color: rgb(231, 208, 179);
+    box-shadow: 10px 10px rgb(40, 106, 128);
 }
 
-.tagline {
-    color: #ffffff;
+/*for input -- when clicked */
+input{
+  display: none; /* Hide the checkbox */
+ }
+
+input:checked + .tag {
+    display: none;
+    animation: fadeIn 1s;
+}
+input:checked + .tag + .content {
+    display: block; 
+    color: rgb(12, 11, 104);
+    animation: fadeIn 1s;
 }
 
-.mission-tag {
-    width: 400px;
-    height: 100px;
-    display: inline-block;
-    color: #ffffff;
+input:not(:checked) + .tag {
+  display: block;
+ animation: fadeIn 1s;
+}
+input:not(:checked) + .tag + .content {
+    display: none;
+    animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
-.policy-tag {
-    width: 400px;
-    height: 100px;
-    display: block;
-    color: #ffffff;
-}
-
-.tagline h2 {
-    border-bottom: 4px solid #964B00;
-    width: 465px;
-
-}
-
+/*for conact us button*/
 .contact-dropdown {
     position: fixed;
-    right: 5px;
-    top: -265px;
-    transform: translateY(500%);
+    right: 5%;
+    top: 5%;
     display: inline-block;
 
 }
 
 
 .contact-dropdown button {
-    background-color: #fff;
     border: none;
-    font-size: 18px;
+    font-size: 130%;
     cursor: pointer;
+    border-radius: 50px; /* Rounded edges */
+
 }
 
 .contact-dropdown button:hover {
-    background-color: #f0f0f0;
+    color: rgb(18, 89, 156);
+
 }
 
 .contact-info {
@@ -68,16 +103,27 @@ body {
     position: absolute;
     right: 0;
     top: 100%;
-    background-color: #fff;
-    border: 1px solid #ddd;
     padding: 10px;
     width: 200px;
+    background-color: rgb(233, 221, 185);
 }
 
 .contact-dropdown:hover .contact-info {
     display: block;
+    border-radius: 15px;
 }
 
-.contact-info p {
-    margin-bottom: 10px;
+
+.contact-info p:hover {
+    background-color: rgb(228, 208, 147);
 }
+
+.contact-info a {
+    color: inherit; /* Inherit color from parent element */
+    text-decoration: none; /* Remove underline */
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
