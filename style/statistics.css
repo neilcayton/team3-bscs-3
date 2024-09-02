@@ -24,14 +24,9 @@ body::-webkit-scrollbar {
 }
 h3 {
     font-size: 1.5rem;
-    margin-bottom: 10%;
+    margin-bottom: 10px;
 }
 
-h3:hover{
-    font-weight: 150px;
-    font-size: 2.5rem;
-    text-shadow: 0 5px 10px rgb(169, 255, 9);
-}
 
 .main-container > p {
     margin-left: 30px;
