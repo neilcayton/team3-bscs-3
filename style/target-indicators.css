@@ -45,6 +45,8 @@ body {
 }
 
 .target-card {
+    display: flex;
+    flex-direction: column;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -55,6 +57,15 @@ body {
     flex-shrink: 0;
     transition: 0.5s ease-in-out smooth;
 }
+.target-card  img {
+    width: 40%;
+    height: 40%;
+}
+
+.target-card > div:last-child {
+    display: flex;
+    flex-direction: row;
+}
 
 .left-scroll {
     left: 0;
@@ -63,6 +74,7 @@ body {
 .right-scroll {
     right: 0;
 }
+
 
 /* .left-scroll-container:hover {
     background-color: #ff0000;
@@ -132,7 +144,8 @@ body {
     margin-top: 5px;
 }
 
-i {
+.target-card i {
+    padding: 2%;
     font-size: 2em;
     color: #4a90e2;
 }
