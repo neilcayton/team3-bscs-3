@@ -47,108 +47,68 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Target card */
 .target-card {
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
+    background-color: #e2cfb9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    width: 350px;
+
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 35% 65%;
+    grid-template-areas: 
+    "images images title title"
+    "images images paragraph paragraph";
+    border-radius: 10%;
+    width: 80vw; 
+    max-width: 25rem; 
+    height: 15vw; 
     flex-shrink: 0;
-    transition: 0.5s ease-in-out smooth;
+    transition: 
+        width 0.5s ease-in-out,
+        height 0.5s ease-in-out, 
+        transform 1s ease-in-out; 
+    position: relative;
 }
-.target-card  img {
-    width: 40%;
-    height: 40%;
-}
-
-.target-card > div:last-child {
-    display: flex;
-    flex-direction: row;
-}
-
-.left-scroll {
-    left: 0;
-}
-
-.right-scroll {
-    right: 0;
-}
-
-
-/* .left-scroll-container:hover {
-    background-color: #ff0000;
-    opacity: 1;
-}
-
-
-.right-scroll-container:hover {
-    background-color: #4a90e2;
-    opacity: 1;
-} */
-
-/* .left-scroll-container:hover  ~ .targets-container {
-    overflow-y: scroll;
-    transform: translateX(1000px);
-
-}
-
-
-.right-scroll-container:hover ~ .targets-container {
+.images{
+    grid-area: images;
+    align-content: center;
     
-    transform: translateX(-1000px);
-} */
+}
+.images img {
+   
+    width: 70%; 
+    max-width: 10rem; 
+    height: auto;
+    margin-left: 13.5%;
+}
+.title{
+    grid-area: title;
+    text-align: center;
+    align-content: center;
+    font-weight: 700; 
+    color: rgb(124, 238, 238);
+    font-size: 1.5rem;
+   
+}
+.paragraph{
+    grid-area: paragraph;
+    text-align: center;
+    align-content: center;
+    font-size: 0.7rem;
+    
+}
+.target-card:hover{
+    grid-template-areas: 
+    "title title title title"
+    "images images paragraph paragraph";
+
+    width: 82vw; /* Responsive width, scales with viewport */
+    max-width: 26rem; /* Ensures it doesn't grow too large on wide screens */
+    height: 17vw; /* Let content dictate the height */
+    transform: translateY(-10px); 
 
 
-.left-scroll-container:hover ~ .targets-container {
-    transform: translateX(var(--scroll-amount));
 }
 
-.right-scroll-container:hover ~ .targets-container {
-    transform: translateX(calc(-1 * var(--scroll-amount)));
-}
 
-
-.target-card:hover {
-    background-color: bisque;
-    font-size: 20px;
-    width: 400px;
-    height: 220px;
-    transform: scale(5.05);
-    transform: translateY(-5px);
-}
-
-.target-card:hover h4 , i{
-
-    font-size: 40px;
-  
-}
-
-/* .target-card:hover i {
-    font-size: ;
-  
-} */
-
-.target-content {
-    margin-left: 15px;
-}
-
-.target-content h4 {
-    font-size: 1.2em;
-    color: #333;
-}
-
-.target-content p {
-    color: #666;
-    font-size: 0.95em;
-    margin-top: 5px;
-}
-
-.target-card i {
-    padding: 2%;
-    font-size: 2em;
-    color: #4a90e2;
-}
