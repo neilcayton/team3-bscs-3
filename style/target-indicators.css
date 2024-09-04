@@ -34,10 +34,6 @@ body {
     background-color: transparent;
     transition: background-color 0.3s ease;
 }
-/* 
-.targets-container:hover {
-    scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
-} */
 
 .targets-container:hover:not(:has(.target-card:hover)) {
     scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
@@ -51,18 +47,18 @@ body {
 .target-card {
     background-color: #e2cfb9;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 10px rgba(188, 23, 23, 0.1);
 
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 40% 30% 30%;
     grid-template-rows: 35% 65%;
     grid-template-areas: 
-    "images images title title"
-    "images images paragraph paragraph";
+    "images title title"
+    "images paragraph paragraph";
     border-radius: 10%;
-    width: 80vw; 
-    max-width: 25rem; 
-    height: 15vw; 
+    width: 85vw; 
+    max-width: 28rem; 
+    height: 19vw; 
     flex-shrink: 0;
     transition: 
         width 0.5s ease-in-out,
@@ -71,44 +67,52 @@ body {
     position: relative;
 }
 .images{
+    /*border: 1px solid black;*/
     grid-area: images;
     align-content: center;
     
 }
 .images img {
-   
-    width: 70%; 
+   /* border: 1px solid black;*/
+    width: 100%; 
     max-width: 10rem; 
     height: auto;
-    margin-left: 13.5%;
+    margin-left: 5%;
 }
 .title{
+    /*border: 1px solid black;*/
     grid-area: title;
     text-align: center;
     align-content: center;
     font-weight: 700; 
-    color: rgb(124, 238, 238);
-    font-size: 1.5rem;
+    color: rgb(44, 61, 157);
+    font-size: 2.4rem;
    
 }
 .paragraph{
+    /*border: 1px solid black;*/
     grid-area: paragraph;
     text-align: center;
     align-content: center;
     font-size: 0.7rem;
     
 }
-.target-card:hover{
-    grid-template-areas: 
-    "title title title title"
-    "images images paragraph paragraph";
-
-    width: 82vw; /* Responsive width, scales with viewport */
-    max-width: 26rem; /* Ensures it doesn't grow too large on wide screens */
-    height: 17vw; /* Let content dictate the height */
-    transform: translateY(-10px); 
-
-
+.paragraph p{
+    margin-left: 3%;
+    margin-right: 3%;
 }
+
+/*
+this hover has no bugs, application is optional
+.target-card:hover{ 
+    width: 87vw; 
+    max-width: 30rem; 
+    height: 21vw;  
+    transform: translateY(-10px); 
+}
+*/
+
+
+
 
 
