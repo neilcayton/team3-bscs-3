@@ -20,10 +20,10 @@ body {
 :root {
     --body-color: #e4e9f7;
     --sidebar-color: rgb(80, 104, 235);
-    --primary-color: rgb(40, 179, 248);
+    --primary-color: rgb(0, 4, 5);
     --toggle-color: #DDD;
     --text-color: #707070;
-    --text--prime-color: rgba(207, 189, 245, 0.5);
+    /* --text--prime-color: rgba(207, 189, 245, 0.5); */
 
     --tran-01: all 0.1s ease;
     --tran-02: all 0.2s smooth;
@@ -64,6 +64,7 @@ body {
 
 .navbar li {
     height: 50px;
+    background: var(--text--prime-color);
     margin-top: 10px;
     list-style: none;
     display: flex;
@@ -162,6 +163,10 @@ body {
 
 .toggle {
     display: none;
+}
+
+#stat-id{
+    height: 60vh;
 }
 
 .navbar .toggle-btn {
