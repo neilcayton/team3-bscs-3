@@ -51,8 +51,6 @@ body::-webkit-scrollbar {
     z-index: 1; /* Higher z-index to overlap video */ 
     width: 80%;
     height: 50%;
-    border: 10px solid white;
-    border-radius: 5%;
 }
 
 .tag{

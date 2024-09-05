@@ -1,93 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins' ,sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
-body{
-    /* height: 100vh; */
+body {
     background: var(--body-color);
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: row;
-    font-family: 'Poppins' ,sans-serif;
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
 
-/* #stat-id{
-    height: 120vh;
-} */
-
-
-.content {
-    padding-left: 300px;
-    flex: 1;
-    overflow-y: auto; 
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    transition: padding-left 0.3s ease;
-}
-
-
-.sections section {
-    height: auto;
-    align-self: stretch;
-    overflow-y: hidden; 
-}
-
-.sections iframe {
-    overflow-y: hidden;
-    width: 100%;
-    height: 150vh; 
-    border: none;
-    box-sizing: border-box;
-
-}
-
-
-
 :root {
     --body-color: #e4e9f7;
-    --sidebar-color: rgb(232, 211, 140);
-    --primary-color: rgb(85, 67, 35);
+    --sidebar-color: rgb(80, 104, 235);
+    --primary-color: rgb(40, 179, 248);
     --toggle-color: #DDD;
     --text-color: #707070;
-    --text--prime-color: rgba(207, 189, 245, 0.5):
+    --text--prime-color: rgba(207, 189, 245, 0.5);
 
     --tran-01: all 0.1s ease;
     --tran-02: all 0.2s smooth;
     --tran-03: all 0.3s ease;
     --tran-04: all 0.4s ease;
     --tran-05: all 0.5s ease;
-
 }
 
-
-.navbar .text{
+.navbar .text {
     font-size: 16px;
     font-weight: 400;
     transition: var(--tran-04);
     white-space: nowrap;
     opacity: 1;
 }
+
 .navbar .image-text img {
     width: 50px;
     border-radius: 15%;
 }
 
-
 .navbar .image {
-    min-width: 95px; 
+    min-width: 95px;
     display: flex;
     align-items: center;
 }
-/* ====taas=== */
 
 .navbar {
     position: absolute;
@@ -100,16 +62,15 @@ body{
     transition: width 0.3s ease;
 }
 
-
-.navbar li{
+.navbar li {
     height: 50px;
-    background: var(--text--prime-color);;
     margin-top: 10px;
     list-style: none;
     display: flex;
     align-items: center;
 }
-.navbar li .icons{
+
+.navbar li .icons {
     align-items: center;
     justify-content: center;
     min-width: 60px;
@@ -117,17 +78,18 @@ body{
     padding: 0 20px;
 }
 
-.navbar li .icons, 
-.navbar li .text{
+.navbar li .icons,
+.navbar li .text {
     color: black;
     transition: var(--tran-04);
-} 
+}
 
 .navbar header {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .navbar header .image-text {
     display: flex;
     align-items: center;
@@ -137,23 +99,20 @@ body{
     display: flex;
     flex-direction: column;
     text-align: center;
-
 }
 
-.header-text .name{
+.header-text .name {
     font-weight: 600;
     font-size: 25px;
 }
 
-.header-text .class{
+.header-text .class {
     margin-top: 2px;
     font-size: 19px;
 }
 
-
-#nav-toggle:hover +.toggle-btn {
+#nav-toggle:hover + .toggle-btn {
     color: rgba(255, 255, 255, 1);
-    /* padding: 5px; */
     box-shadow: 0 5px 15px rgba(92, 160, 182, 0.4);
 }
 
@@ -162,13 +121,10 @@ body{
     font-size: 90px;
 }
 
-
-
 #nav-toggle:checked ~ .navbar {
     transition: var(--tran-05);
     width: 88px;
 }
-
 
 #nav-toggle:not(:checked) ~ .navbar {
     transition: var(--tran-05);
@@ -184,23 +140,21 @@ body{
     transition: var(--tran-05);
     padding-left: 300px;
 }
-/* test */
-#nav-toggle:checked ~ .navbar .text{
-    transition: var(--tran-1);
+
+#nav-toggle:checked ~ .navbar .text {
+    transition: var(--tran-01);
     opacity: 0;
 }
 
-#nav-toggle:not(:checked) ~ .navbar .text{
-    transition: var(--tran-2);
+#nav-toggle:not(:checked) ~ .navbar .text {
+    transition: var(--tran-02);
     opacity: 1;
 }
 
 #nav-toggle:checked ~ .navbar .toggle-btn {
     right: 20px;
-    transition: var(--tran-5);
+    transition: var(--tran-05);
 }
-
-
 
 #nav-toggle {
     display: none;
@@ -210,8 +164,8 @@ body{
     display: none;
 }
 
-.navbar .toggle-btn{
-    caret-color: transparent; /* for blinking cursor (|) ganito example */
+.navbar .toggle-btn {
+    caret-color: transparent;
     position: absolute;
     right: 130px;
     height: 50px;
@@ -226,7 +180,7 @@ body{
     cursor: pointer;
     color: var(--sidebar-color);
     font-size: 30px;
-    transition: var(--tran-5);
+    transition: var(--tran-05);
 }
 
 .navbar li a {
@@ -238,23 +192,45 @@ body{
     border-radius: 6px;
 }
 
-.navbar li a:hover{
+.navbar li a:hover {
     background: var(--primary-color);
 }
 
 .navbar li a:hover .icons,
-.navbar li a:hover .text{
+.navbar li a:hover .text {
     color: var(--sidebar-color);
 }
 
-.navbar .menu-bar{
-    height: calc(100% -50px);
+.navbar .menu-bar {
+    height: calc(100% - 50px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 
+.content {
+    padding-left: 300px;
+    flex: 1;
+    overflow-y: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: padding-left 0.3s ease;
+}
+
+.sections section {
+    height: auto;
+    align-self: stretch;
+    overflow-y: hidden;
+}
+
+.sections iframe {
+    overflow-y: hidden;
+    width: 100%;
+    height: 150vh;
+    border: none;
+    box-sizing: border-box;
+}
 
 @media (max-width: 768px) {
     .navbar {
@@ -300,8 +276,9 @@ body{
         margin-top: 60px;
         height: 100vh;
     }
+
     .iframe-container {
-        height: 100vh; /* Adjust height based on content */
+        height: 100vh;
     }
 
     .iframe-container iframe {
