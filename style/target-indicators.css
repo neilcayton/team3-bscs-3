@@ -51,19 +51,16 @@ body {
 
     display: grid;
     grid-template-columns: 40% 30% 30%;
-    grid-template-rows: 35% 65%;
+    grid-template-rows: 32% 68%;
     grid-template-areas: 
     "images title title"
     "images paragraph paragraph";
     border-radius: 10%;
     width: 85vw; 
     max-width: 28rem; 
-    height: 19vw; 
+    height: 20vw; 
     flex-shrink: 0;
-    transition: 
-        width 0.5s ease-in-out,
-        height 0.5s ease-in-out, 
-        transform 1s ease-in-out; 
+    transition: background-color 1s; 
     position: relative;
 }
 .images{
@@ -74,27 +71,27 @@ body {
 }
 .images img {
    /* border: 1px solid black;*/
-    width: 100%; 
+    width: 25vw; 
     max-width: 10rem; 
     height: auto;
     margin-left: 5%;
 }
 .title{
-    /*border: 1px solid black;*/
+    /* border: 1px solid black;*/
     grid-area: title;
     text-align: center;
     align-content: center;
     font-weight: 700; 
     color: rgb(44, 61, 157);
-    font-size: 2.4rem;
+    font-size: 2.3vw;
    
 }
 .paragraph{
-    /*border: 1px solid black;*/
+    /* border: 1px solid black;*/
     grid-area: paragraph;
     text-align: center;
     align-content: center;
-    font-size: 0.7rem;
+    font-size: 0.95vw;
     
 }
 .paragraph p{
@@ -104,13 +101,12 @@ body {
 
 /*
 this hover has no bugs, application is optional
-.target-card:hover{ 
-    width: 87vw; 
-    max-width: 30rem; 
-    height: 21vw;  
-    transform: translateY(-10px); 
-}
 */
+.target-card:hover{  
+    transform: translateY(-10px); 
+    background-color: #f1c592;
+}
+
 
 
 

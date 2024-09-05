@@ -17,21 +17,19 @@ body::-webkit-scrollbar {
 }
 
 /* mission and policy*/
-.inner-containter, .video-container{
-   display: flex; 
-   margin-left: 1%;
-   margin-right: 1%;
-/* border: 1px solid black; */
-}
 
 
 .inner-containter{
+    display: flex;
+    margin-left: 1%;
+    margin-right: 1%;
     padding: 3%;
     flex-direction: row;
 
 }
 
 .video-container {   
+    display: flex;
     position: relative;  
     text-align: center;  
 
@@ -77,7 +75,7 @@ body::-webkit-scrollbar {
 }
 
 .section-Container:hover{
-    background-color: rgb(231, 208, 179);
+    background-color: rgb(231, 208, 179); 
     box-shadow: 10px 10px rgb(40, 106, 128);
 }
 
