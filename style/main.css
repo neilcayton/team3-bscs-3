@@ -177,7 +177,7 @@ body{
 
 #nav-toggle:checked ~ .content {
     transition: var(--tran-05);
-    padding-left: 88px;
+    padding-left: 88px ;
 }
 
 #nav-toggle:not(:checked) ~ .content {
