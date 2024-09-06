@@ -6,111 +6,424 @@
     --scroll-width: 10px;
 }
 
-body {
+body, html {
     font-family: 'Poppins', sans-serif;
     background-color: transparent;
     margin: 0;
+    background-color: #0074f0;
+    box-sizing: border-box;
     overflow: hidden;
+    overflow-y: auto;
 }
 
-.targets-container {
-    display: flex;
-    align-items: baseline;
-    gap: 20px;
-    padding: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: thin;
-    scrollbar-color: transparent transparent;
-    transition: scrollbar-color 0.3s ease;
-}
-
-.targets-container::-webkit-scrollbar {
-    width: var(--scroll-width);
-    height: var(--scroll-width);
-}
-
-.targets-container::-webkit-scrollbar-thumb {
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-}
-
-.targets-container:hover:not(:has(.target-card:hover)) {
-    scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
-}
-
-.targets-container:hover:not(:has(.target-card:hover))::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* Target card */
-.target-card {
-    background-color: #e2cfb9;
-    border-radius: 8px;
-    box-shadow: 0 10px 10px rgba(188, 23, 23, 0.1);
-
-    display: grid;
-    grid-template-columns: 40% 30% 30%;
-    grid-template-rows: 35% 65%;
-    grid-template-areas: 
-    "images title title"
-    "images paragraph paragraph";
-    border-radius: 10%;
-    width: 85vw; 
-    max-width: 28rem; 
-    height: 19vw; 
-    flex-shrink: 0;
-    transition: 
-        width 0.5s ease-in-out,
-        height 0.5s ease-in-out, 
-        transform 1s ease-in-out; 
-    position: relative;
-}
-.images{
-    /*border: 1px solid black;*/
-    grid-area: images;
-    align-content: center;
+@media screen and (min-width: 1440px) {
+    .targets-container {
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+        padding: 20px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+        transition: scrollbar-color 0.3s ease;
+    }
+    
+    .targets-container::-webkit-scrollbar {
+        width: var(--scroll-width);
+        height: var(--scroll-width);
+    }
+    
+    .targets-container::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+    }
+    
+    .targets-container:hover:not(:has(.target-card:hover)) {
+        scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
+    }
+    
+    .targets-container:hover:not(:has(.target-card:hover))::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Target card */
+    .target-card {
+        background-color: #e2cfb9;
+        border-radius: 8px;
+        box-shadow: 0 10px 10px rgba(188, 23, 23, 0.1);
+    
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: 
+        "images content"
+        "images content";
+        border-radius: 10%;
+        width: 85vw; 
+        max-width: 28rem; 
+        height: 20vw; 
+        flex-shrink: 0;
+        transition:  1s; 
+        position: relative;
+    }
+    .images{
+        /*border: 1px solid black;*/
+        grid-area: images;
+        align-content: center;
+        
+    }
+    .images img {
+       /* border: 1px solid black;*/
+        width: 25vw; 
+        max-width: 10rem; 
+        height: auto;
+        margin-left: 5%;
+    }
+    .content{
+        /* border: 1px solid black;*/
+        padding-top: 50%;
+        height: 20%;
+        grid-area: content;
+        text-align: center;
+        align-content: center;
+        overflow: hidden;
+        transition: 1s;
+    }
+    
+    .content p{
+        font-size: 0.95vw;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .content i{
+        font-weight: 700; 
+        color: rgb(44, 61, 157);
+        font-size: 2.45vw;
+    }
+    
+    /*
+    this hover has no bugs, application is optional
+    */
+    .target-card:hover{ 
+        transform: translateY(-10px); 
+        background-color: #f1c592;
+    }
+    .content:hover{ 
+        height: 100%;
+        padding: 0%;
+    }
     
 }
-.images img {
-   /* border: 1px solid black;*/
-    width: 100%; 
-    max-width: 10rem; 
-    height: auto;
-    margin-left: 5%;
+
+@media screen and (max-width: 1440px) and (min-width: 769px) {
+    .targets-container {
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+        padding: 20px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+        transition: scrollbar-color 0.3s ease;
+    }
+    
+    .targets-container::-webkit-scrollbar {
+        width: var(--scroll-width);
+        height: var(--scroll-width);
+    }
+    
+    .targets-container::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+    }
+    
+    .targets-container:hover:not(:has(.target-card:hover)) {
+        scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
+    }
+    
+    .targets-container:hover:not(:has(.target-card:hover))::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Target card */
+    .target-card {
+        background-color: #e2cfb9;
+        border-radius: 8px;
+        box-shadow: 0 10px 10px rgba(188, 23, 23, 0.1);
+    
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: 
+        "images content"
+        "images content";
+        border-radius: 10%;
+        width: 85vw; 
+        max-width: 28rem; 
+        height: 20vw; 
+        flex-shrink: 0;
+        transition:  1s; 
+        position: relative;
+    }
+    .images{
+        /*border: 1px solid black;*/
+        grid-area: images;
+        align-content: center;
+        
+    }
+    .images img {
+       /* border: 1px solid black;*/
+        width: 25vw; 
+        max-width: 10rem; 
+        height: auto;
+        margin-left: 5%;
+    }
+    .content{
+        /* border: 1px solid black;*/
+        padding-top: 30%;
+        height: 20%;
+        grid-area: content;
+        text-align: center;
+        align-content: center;
+        overflow: hidden;
+        transition: 1s;
+    }
+    
+    .content p{
+        font-size: 0.95vw;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .content i{
+        font-weight: 700; 
+        color: rgb(44, 61, 157);
+        font-size: 2.45vw;
+    }
+    
+    /*
+    this hover has no bugs, application is optional
+    */
+    .target-card:hover{ 
+        transform: translateY(-10px); 
+        background-color: #f1c592;
+    }
+    .content:hover{ 
+        height: 100%;
+        padding: 0%;
+    }
+    
 }
-.title{
-    /*border: 1px solid black;*/
-    grid-area: title;
-    text-align: center;
-    align-content: center;
-    font-weight: 700; 
-    color: rgb(44, 61, 157);
-    font-size: 2.4rem;
+
+@media screen and (max-width: 768px) and (min-width: 425px){
+
+    .targets-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 8px;
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+        transition: scrollbar-color 0.3s ease;
+    }
+    
    
-}
-.paragraph{
-    /*border: 1px solid black;*/
-    grid-area: paragraph;
-    text-align: center;
-    align-content: center;
-    font-size: 0.7rem;
+    
+    /* Target card */
+    .target-card {
+        border: 1px solid black;
+        background-color: #e2cfb9;
+        border-radius: 8px;
+        box-shadow: 0 10px 10px rgba(188, 23, 23, 0.1);
+    
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: 
+        "images content"
+        "images content";
+        border-radius: 10%;
+        width: 40vw; 
+        max-width: 28rem; 
+        height: 20vw; 
+        flex-shrink: 0;
+        margin-left: 10%;
+        pointer-events: none;
+    }
+    .images{
+        /*border: 1px solid black;*/
+        grid-area: images;
+        align-content: center;
+        
+    }
+    .images img {
+       /* border: 1px solid black;*/
+        width: 17vw; 
+        max-width: 10rem; 
+        height: auto;
+        margin-left: 5%;
+    }
+    .content{
+        /* border: 1px solid black;*/
+        grid-area: content;
+        text-align: center;
+        align-content: center;
+        height: 100%;
+        overflow: visible; /* Make sure overflow is visible */
+        height: auto; /* Ensure height is auto to fit content */
+        pointer-events: none;
+    }
+
+    
+    .content p{
+        font-size: 0.95vw;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .content i{
+        font-weight: 700; 
+        color: rgb(44, 61, 157);
+        font-size: 2.45vw;
+    }
     
 }
-.paragraph p{
-    margin-left: 3%;
-    margin-right: 3%;
+
+@media screen and (max-width: 425px) {
+
+    .targets-container {
+        display: flex;
+        flex-direction: column;
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+        transition: scrollbar-color 0.3s ease;
+        align-content: center;
+    }
+    
+   
+    
+    /* Target card */
+    .target-card {
+        border: 1px solid black;
+        background-color: #e2cfb9;
+        box-shadow: 0 10px 10px rgba(188, 23, 23, 0.1);
+    
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: 
+        "images content"
+        "images content";
+        border-radius: 10%;
+        width: 80vw; 
+        max-width: 28rem; 
+        height: 40vw; 
+        flex-shrink: 0;
+        margin-left: 10%;
+        margin-bottom: 5%;
+        
+        
+        
+    }
+    .images{
+        /*border: 1px solid black;*/
+        grid-area: images;
+        align-content: center;
+        
+    }
+    .images img {
+       /* border: 1px solid black;*/
+        width: 50vw; 
+        height: auto;
+    }
+    .content{
+        /* border: 1px solid black;*/
+        grid-area: content;
+        text-align: center;
+        align-content: center;
+        height: 100%;
+    }
+
+    
+    .content p{
+        font-size: 2.3vw;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .content i{
+        font-weight: 700; 
+        color: rgb(44, 61, 157);
+        font-size: 5vw;
+    }
+    
 }
 
-/*
-this hover has no bugs, application is optional
-.target-card:hover{ 
-    width: 87vw; 
-    max-width: 30rem; 
-    height: 21vw;  
-    transform: translateY(-10px); 
+@media screen and (max-width: 375px) {
+
+    .targets-container {
+        display: flex;
+        flex-direction: column;
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+        transition: scrollbar-color 0.3s ease;
+        align-content: center;
+    }
+    
+   
+    
+    /* Target card */
+    .target-card {
+        border: 1px solid black;
+        background-color: #e2cfb9;
+        box-shadow: 0 10px 10px rgba(188, 23, 23, 0.1);
+    
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: 
+        "images content"
+        "images content";
+        border-radius: 10%;
+        width: 80vw; 
+        max-width: 28rem; 
+        height: 40vw; 
+        flex-shrink: 0;
+        margin-left: 10%;
+        margin-bottom: 5%;
+        
+        
+        
+    }
+    .images{
+        /*border: 1px solid black;*/
+        grid-area: images;
+        align-content: center;
+        
+    }
+    .images img {
+       /* border: 1px solid black;*/
+        width: 40vw; 
+        height: auto;
+    }
+    .content{
+        /* border: 1px solid black;*/
+        grid-area: content;
+        text-align: center;
+        align-content: center;
+        height: 100%;
+    }
+
+    
+    .content p{
+        font-size: 2.3vw;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .content i{
+        font-weight: 700; 
+        color: rgb(44, 61, 157);
+        font-size: 4.5vw;
+    }
+    
 }
-*/
+
 
 
 
