@@ -18,25 +18,27 @@ body {
 }
 
 :root {
-    --body-color: #e4e9f7;
-    --sidebar-color: rgb(80, 104, 235);
-    --primary-color: rgb(40, 179, 248);
+    --body-color: #000411;
+    --sidebar-color: #160c28;
+    --primary-color: #efcb68;
     --toggle-color: #DDD;
     --text-color: #707070;
     --text--prime-color: rgba(207, 189, 245, 0.5);
 
-    --tran-01: all 0.1s ease;
+    --tran-01: all 0.1s smooth;
     --tran-02: all 0.2s smooth;
-    --tran-03: all 0.3s ease;
-    --tran-04: all 0.4s ease;
-    --tran-05: all 0.5s ease;
+    --tran-03: all 0.3s smooth;
+    --tran-04: all 0.4s smooth;
+    --tran-05: all 0.5s smooth;
+    --tran-06: all 0.5s linear;
+    --tran-07: all 0.1s ease-out;
 }
 
 .navbar {
     position: fixed; 
     top: 0;
     left: 0;
-    width: 300px;
+    width: auto;
     height: 100vh;
     padding: 20px 14px;
     background: var(--sidebar-color); 
@@ -45,6 +47,7 @@ body {
 }
 
 .navbar .text {
+    user-select: none;
     font-size: 16px;
     font-weight: 400;
     transition: var(--tran-04);
@@ -82,7 +85,7 @@ body {
 
 .navbar li .icons,
 .navbar li .text {
-    color: black;
+    color: #e1efe6;
     transition: var(--tran-04);
 }
 
@@ -100,12 +103,14 @@ body {
 .navbar .image-text .header-text {
     display: flex;
     flex-direction: column;
+    color: var(--text--prime-color);
     text-align: center;
 }
 
 .header-text .name {
     font-weight: 600;
     font-size: 25px;
+    
 }
 
 .header-text .class {
@@ -122,19 +127,21 @@ body {
 }
 
 #nav-toggle:checked ~ .content {
-    padding-left: 88px;
+    padding-left: 70px;
 }
 
 #nav-toggle:not(:checked) ~ .content {
-    padding-left: 300px;
+    padding-left: 280px;
 }
 
 #nav-toggle:checked ~ .navbar .text {
     opacity: 0;
+    transition: var(--tran-07);
 }
 
 #nav-toggle:not(:checked) ~ .navbar .text {
     opacity: 1;
+    transition: var(--tran-06);
 }
 
 #nav-toggle {
@@ -148,7 +155,7 @@ body {
     width: 50px;
     transform: translateY(900%);
     display: flex;
-    background: black;
+    background: var(--primary-color);
     align-items: center;
     justify-content: center;
     border-radius: 10%;
@@ -206,6 +213,15 @@ body {
     border: none;
     box-sizing: border-box;
 }
+
+.body-header{
+    color: #ffffff;
+    font-size: xx-large;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
 
 @media (max-width: 768px) {
     .navbar {
