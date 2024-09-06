@@ -173,7 +173,7 @@ input:not(:checked) + .tag + .content {
     }
     
     .content{
-        display: block;
+        display: none;
         color: white!important;
         font-size: 1vw;
         
@@ -193,13 +193,28 @@ input:not(:checked) + .tag + .content {
         box-shadow: 5px 5px rgba(173, 216, 230, 0);
     }/* Ensure that both tag and content are shown */
     
-    input:not(:checked) + .tag {
-        display: block !important;
+    input{
+        display: none; /* Hide the checkbox */
     }
-
-    input:not(:checked) + .tag + .content {
-        display: block !important; /* Make content visible */
+    input:checked + .tag {
+        display: block;
+        animation: fadeIn 1s;
     }
+    
+     input:checked + .tag + .content {
+         display: block; 
+         color: white;
+         animation: fadeIn 1s;
+    }
+        
+        input:not(:checked) + .tag {
+        display: block;
+        animation: fadeIn 1s;
+        }
+        input:not(:checked) + .tag + .content {
+            display: none;
+            animation: fadeIn 1s;
+        }
 
     
 }
