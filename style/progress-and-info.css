@@ -51,7 +51,7 @@ html::-webkit-scrollbar {
 .target-card {
     border: 1px solid #ddd;
     border-radius: 8px;
-    overflow: hidden;
+    overflow: auto;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     background-color: bisque;
     margin-bottom: 20px;
@@ -98,7 +98,7 @@ html::-webkit-scrollbar {
     background-color: #f9f9f9;
     opacity: 0;
     max-height: 0;
-    overflow-y: hidden;
+    overflow-y: auto;
     color: #222222;
     transition: opacity 0.3s ease, max-height 0.3s ease;
 }

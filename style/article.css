@@ -86,7 +86,7 @@ body::-webkit-scrollbar {
     margin-right: var(--dl-space-space-fourunits);
     border-radius: var(--dl-radius-radius-radius8);
     flex-direction: column;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .home-video-container {
@@ -210,7 +210,7 @@ body::-webkit-scrollbar {
     border-radius: var(--dl-radius-radius-radius8);
     margin-bottom: var(--dl-space-space-fourunits);
     flex-direction: column;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .home-image {
