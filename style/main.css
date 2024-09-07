@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
 * {
     margin: 0;
@@ -18,21 +18,36 @@ body {
 }
 
 :root {
-    --body-color: #e4e9f7;
-    --sidebar-color: rgb(80, 104, 235);
-    --primary-color: rgb(0, 4, 5);
+    --body-color: #000411;
+    --sidebar-color: #160c28;
+    --primary-color: #efcb68;
     --toggle-color: #DDD;
     --text-color: #707070;
     /* --text--prime-color: rgba(207, 189, 245, 0.5); */
 
-    --tran-01: all 0.1s ease;
+    --tran-01: all 0.1s smooth;
     --tran-02: all 0.2s smooth;
-    --tran-03: all 0.3s ease;
-    --tran-04: all 0.4s ease;
-    --tran-05: all 0.5s ease;
+    --tran-03: all 0.3s smooth;
+    --tran-04: all 0.4s smooth;
+    --tran-05: all 0.5s smooth;
+    --tran-06: all 0.5s linear;
+    --tran-07: all 0.1s ease-out;
+}
+
+.navbar {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100vh;
+    padding: 20px 14px;
+    background: var(--sidebar-color); 
+    transition: width 0.3s ease;
+    z-index: 100; 
 }
 
 .navbar .text {
+    user-select: none;
     font-size: 16px;
     font-weight: 400;
     transition: var(--tran-04);
@@ -51,17 +66,6 @@ body {
     align-items: center;
 }
 
-.navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 100vh;
-    padding: 20px 14px;
-    background: var(--sidebar-color);
-    transition: width 0.3s ease;
-}
-
 .navbar li {
     height: 50px;
     background: var(--text--prime-color);
@@ -72,8 +76,9 @@ body {
 }
 
 .navbar li .icons {
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     min-width: 60px;
     font-size: 20px;
     padding: 0 20px;
@@ -81,7 +86,7 @@ body {
 
 .navbar li .icons,
 .navbar li .text {
-    color: black;
+    color: #e1efe6;
     transition: var(--tran-04);
 }
 
@@ -99,12 +104,14 @@ body {
 .navbar .image-text .header-text {
     display: flex;
     flex-direction: column;
+    color: var(--text--prime-color);
     text-align: center;
 }
 
 .header-text .name {
     font-weight: 600;
     font-size: 25px;
+    
 }
 
 .header-text .class {
@@ -112,49 +119,30 @@ body {
     font-size: 19px;
 }
 
-#nav-toggle:hover + .toggle-btn {
-    color: rgba(255, 255, 255, 1);
-    box-shadow: 0 5px 15px rgba(92, 160, 182, 0.4);
-}
-
-#nav-toggle:checked + .toggle-btn .navbar {
-    transition: var(--tran-05);
-    font-size: 90px;
-}
-
 #nav-toggle:checked ~ .navbar {
-    transition: var(--tran-05);
     width: 88px;
 }
 
 #nav-toggle:not(:checked) ~ .navbar {
-    transition: var(--tran-05);
     width: 300px;
 }
 
 #nav-toggle:checked ~ .content {
-    transition: var(--tran-05);
-    padding-left: 88px;
+    padding-left: 70px;
 }
 
 #nav-toggle:not(:checked) ~ .content {
-    transition: var(--tran-05);
-    padding-left: 300px;
+    padding-left: 280px;
 }
 
 #nav-toggle:checked ~ .navbar .text {
-    transition: var(--tran-01);
     opacity: 0;
+    transition: var(--tran-07);
 }
 
 #nav-toggle:not(:checked) ~ .navbar .text {
-    transition: var(--tran-02);
     opacity: 1;
-}
-
-#nav-toggle:checked ~ .navbar .toggle-btn {
-    right: 20px;
-    transition: var(--tran-05);
+    transition: var(--tran-06);
 }
 
 #nav-toggle {
@@ -165,22 +153,16 @@ body {
     display: none;
 }
 
-#stat-id{
-    height: 60vh;
-}
-
 .navbar .toggle-btn {
-    caret-color: transparent;
     position: absolute;
-    right: 130px;
+    right: 20px;
     height: 50px;
     width: 50px;
     transform: translateY(900%);
     display: flex;
-    background: black;
+    background: var(--primary-color);
     align-items: center;
     justify-content: center;
-    justify-items: center;
     border-radius: 10%;
     cursor: pointer;
     color: var(--sidebar-color);
@@ -237,19 +219,24 @@ body {
     box-sizing: border-box;
 }
 
+.body-header{
+    color: #ffffff;
+    font-size: xx-large;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+
 @media (max-width: 768px) {
     .navbar {
-        width: 100%;
-        height: 60px;
+        width: 88px;
+        height: 100vh;
         padding: 10px;
     }
 
-    .navbar.close {
-        height: 60px;
-        width: 100%;
-    }
-
-    .navbar .toggle {
+    .navbar .toggle-btn {
+        display: flex;
         position: absolute;
         top: 10px;
         right: 20px;
@@ -289,5 +276,13 @@ body {
     .iframe-container iframe {
         height: auto;
         min-height: 300px;
+    }
+
+    .content {
+        padding-left: 88px;
+    }
+
+    #nav-toggle:checked ~ .navbar ul {
+        display: flex;
     }
 }
