@@ -10,16 +10,21 @@
     <link rel="icon" href="/images/Team3-logo.png">
 </head>
 <body>
-
     <input type="checkbox" class="toggle" id="nav-toggle">
     <label for="nav-toggle" class="toggle-btn"><i class='bx bx-chevron-right'></i>
     </label>
+    <label for="nav-toggle" class="toggle-btn"><i class='bx bx-chevron-right'></i></label>
+
+
+
+
+        
+
                 <!-- Navigation bar --> 
-                <nav class="navbar "> 
+            <nav class="navbar "> 
                     <input type="checkbox" class="toggle" id="nav-toggle">
-                    <label for="nav-toggle" class="toggle-btn"><i class='bx bx-chevron-right'></i>
-                    <!-- <p class="edge">HIHOO</p> -->
-                    </label>
+                    <label for="nav-toggle" class="toggle-btn"><i class='bx bx-chevron-right'></i></label>
+                    
                     <header>
                         <div class="image-text">
                             <span class="image">
@@ -42,15 +47,17 @@
                                 <li class="nav-links"><a href="#progress-info-id"><i class='bx bx-loader-alt icons' ></i><span class="text nav-text">Solutions</span></a></li>
                                 <li class="nav-links"><a href="#stat-id"><i class='bx bx-stats icons'></i><span class="text nav-text">Statistics</span></a></li>
                                 <li class="nav-links"><a href="#articles-id"><i class='bx bx-news icons' ></i><span class="text nav-text">Articles</span></a></li>
+               
+
                             </ul>
                         </div>
                     </div>
             </nav>
     
             <div class="content">
-                <!-- Sections -->
-                <div class="sections">
-                    <section id="home-id">
+                <!-- Sections. -->
+                <div class="section-container">
+                    <div class="section-content" id="home-id">
                         <!-- <h2>Home</h2> -->
                         <iframe src="/html/home.html" ></iframe>
                     </section>
@@ -60,23 +67,45 @@
                     </section>
                     <section id="progress-info-id">
                         <h2>Solutions</h2>
-                        <iframe src="/html/progress-and-info.html" ></iframe>
-                    </section>
-                    <section id="stat-id">
-                        <h2>Stastistics</h2>
-                        <iframe src="/html/statistics.html"  ></iframe>
-                    </section>
-                    
-                    <section id="articles-id">
-                        <h2>Articles</h2>
-                        <iframe src="/html/article.html" ></iframe>
-                    </section>
+                    </div>
+                </div>
 
-                    <section id="footer-id">
-                        <iframe src="/html/about-us.html"></iframe>
-                    </section>
+                <div class="section-container">
+                    <div class="section-content" id="target-id">
+                        <h2 class="body-header">Target and Indicators</h2>
+                        <iframe src="/html/target-and-indicators.html"></iframe>
+                    </div>
+                </div>
+
+                <div class="section-container">
+                    <div class="section-content" id="progress-info-id">
+                        <h2 class="body-header" >Solutions</h2>
+                        <iframe src="/html/progress-and-info.html" ></iframe>
+                    </div>
+                </div>
+
+                <div class="section-container">
+                    <div class="section-content" id="stat-id">
+                        <h2 class="body-header" >Stastistics</h2>
+                        <iframe src="/html/statistics.html"  ></iframe>
+                    </div>
+                </div>
+
+                <div class="section-container">
+                     
                 
+                <div class="section-content" id="articles-id">
+                    <h2 class="body-header" >Articles</h2>
+                    <iframe src="/html/article.html" ></iframe>
                 </div>
             </div>
+
+
+             
+             
+         
+
+                
+
 </body>
 </html>
