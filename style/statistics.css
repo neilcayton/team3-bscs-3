@@ -35,6 +35,7 @@ body::-webkit-scrollbar {
     --dl-space-space-sevenunits: 56px;
 }
 
+
 .home-banner-advanced-analytics1 {
     width: 100%;
     display: flex;
@@ -196,6 +197,11 @@ th, td {
     text-align: center; /* Center the text */
     padding: 2px;
     /* border: 1px solid #ddd; */
+}
+
+.data-container2 .table-container > td{
+    padding: 49px;
+    
 }
 
 tr{

@@ -4,13 +4,13 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 body {
     background: var(--body-color);
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     font-family: 'Poppins', sans-serif;
@@ -33,16 +33,37 @@ body {
     --tran-07: all 0.1s ease-out;
 }
 
+#home-id:checked ~ .content #home-container,
+#target-id:checked ~ .content #target-container,
+#progress-info-id:checked ~ .content #progress-info-container,
+#stat-id:checked ~ .content #stat-container,
+#articles-id:checked ~ .content #articles-container {
+    display: block;
+}
+
+#home-id:not(:checked) ~ .content #home-container,
+#target-id:not(:checked) ~ .content #target-containter,
+#progress-info-id:not(:checked) ~ .content #progress-info-container,
+#stat-id:not(:checked) ~ .content #stat-container,
+#articles-id:not(:checked) ~ .content #articles-container {
+    display: none;
+}
+
+
+
+
+
 .navbar {
     position: fixed; 
     top: 0;
     left: 0;
-    width: auto;
-    height: 100%;
-    padding: 20px 14px;
+    width: 290px;
+    height: 100vh;
+    padding: 10px ;
     background: var(--sidebar-color); 
     transition: width 0.3s ease;
     z-index: 100; 
+    overflow: hidden;
 }
 
 .navbar .text {
@@ -55,39 +76,128 @@ body {
 }
 
 .navbar .image-text img {
-    width: 50px;
+    /* margin-left: 5px; */
+    width: 60px;
     border-radius: 15%;
 }
 
 .navbar .image {
-    min-width: 95px;
+    min-width: 10px;
     display: flex;
+    align-self: center;
     align-items: center;
 }
 
-.navbar li {
+/* .navbar li label{
     height: 50px;
     background: var(--text--prime-color);
     margin-top: 10px;
     list-style: none;
     display: flex;
     align-items: center;
+    justify-items: center;
 }
 
-.navbar li .icons {
+.navbar li label .icons {
     display: flex;
     align-items: center;
     justify-content: center; 
-    min-width: 60px;
+    min-width: 50px;
     font-size: 20px;
-    padding: 0 20px;
+    margin-left: 10px;
+    padding: 0;
 }
 
-.navbar li .icons,
-.navbar li .text {
+.navbar li label.icons,
+.navbar li label.text {
     color: #e1efe6;
     transition: var(--tran-04);
 }
+
+.navbar li label{
+    text-decoration: none;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    width: 100%;
+    border-radius: 6px;
+    padding: 15px 0px  ;
+    cursor: pointer;
+}
+.navbar li label .icons {
+    color: rgb(132, 255, 0);
+}
+
+.navbar li label .text {
+    color: rgb(255, 255, 255);
+}
+
+.navbar li label:hover {
+    background: var(--primary-color);
+}
+
+.navbar li label:hover .icons,
+.navbar li label:hover .text {
+    color: var(--sidebar-color);
+} */
+
+    
+
+
+.navbar li a{
+    height: 50px;
+    background: var(--text--prime-color);
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.navbar li a .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    min-width: 50px;
+    font-size: 20px;
+    margin-left: 10px;
+    padding: 0;
+}
+
+.navbar li a.icons,
+.navbar li a.text {
+    color: #e1efe6;
+    transition: var(--tran-04);
+}
+
+
+.navbar li a{
+    text-decoration: none;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    width: 100%;
+    border-radius: 6px;
+    padding: 15px 0px  ;
+    cursor: pointer;
+}
+.navbar li a .icons {
+    color: rgb(132, 255, 0);
+}
+
+.navbar li a .text {
+    color: rgb(255, 255, 255);
+}
+
+.navbar li a:hover {
+    background: var(--primary-color);
+}
+
+.navbar li a:hover .icons,
+.navbar li a:hover .text {
+    color: var(--sidebar-color);
+}
+
 
 .navbar header {
     display: flex;
@@ -98,12 +208,15 @@ body {
 .navbar header .image-text {
     display: flex;
     align-items: center;
+    padding: 20px;
 }
 
-.navbar .image-text .header-text {
+.navbar .image-text .text-header span{
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
-    color: var(white);
+    font-size: 1.5rem;
+    color: white;
     text-align: center;
 }
 
@@ -139,23 +252,6 @@ body {
     transition: var(--tran-05);
 }
 
-.navbar li a {
-    text-decoration: none;
-    align-items: center;
-    height: 100%;
-    display: flex;
-    width: 100%;
-    border-radius: 6px;
-}
-
-.navbar li a:hover {
-    background: var(--primary-color);
-}
-
-.navbar li a:hover .icons,
-.navbar li a:hover .text {
-    color: var(--sidebar-color);
-}
 
 .navbar .menu-bar {
     height: calc(100% - 50px);
@@ -164,21 +260,44 @@ body {
     justify-content: space-between;
 }
 
-#nav-toggle:checked ~ .navbar {
-    width: 88px;
+#nav-toggle:checked ~ .navbar .image-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 3px;
 }
 
-#nav-toggle:not(:checked) ~ .navbar {
-    width: 300px;
+#nav-toggle:checked ~ .navbar .image-text .text-header span {
+    display: none;
+}
+#nav-toggle:checked ~ .navbar .image-text .image img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+#nav-toggle:checked ~ .navbar .image-text .image {
+    margin: 0 auto;
+}
+
+#nav-toggle#nav-toggle:checked ~ .navbar {
+    width: 70px;
 }
 
 #nav-toggle:checked ~ .content {
-    padding-left: 70px;
+    margin-left: 70px;
+    width: calc(100% - 70px);
+}
+
+#nav-toggle:not(:checked) ~ .navbar {
+    width: 290px;
 }
 
 #nav-toggle:not(:checked) ~ .content {
-    padding-left: 280px;
+    margin-left: 290px;
+    width: calc(100% - 290px);
 }
+
 
 #nav-toggle:checked ~ .navbar .text {
     opacity: 0;
@@ -194,16 +313,20 @@ body {
     display: none;
 }
 
+body, .navbar, .content {
+    cursor: default;
+}
 
 
 .content {
-    padding-left: 300px;
+    margin-left: 290px;
     flex: 1;
-    width: 100%;
+    width: calc(100% - 290px);
     overflow-y: hidden;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-left: 0;
     transition: padding-left 0.3s ease;
 }
 
@@ -242,6 +365,10 @@ iframe {
     margin-top: 10px;
     margin-left: 10px;
     margin-bottom: 5px;
+}
+
+.hidden {
+    display: none;
 }
 
 
