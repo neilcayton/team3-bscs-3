@@ -20,7 +20,6 @@ body::-webkit-scrollbar {
 
 
 .inner-containter{
-    border:  1px solid white;
     display: flex;
     position: absolute;
     z-index: 1;
@@ -35,29 +34,37 @@ body::-webkit-scrollbar {
 
 }
 
-.video-container {   
+.video-container {
+    border: none; 
+    width: 100%;
+    height: 100%;   
     display: flex;
     position: relative;  
     text-align: center;  
+    overflow: hidden;
 
 }  
 .video-container video {  
+    object-fit: cover; 
+    position: absolute;
     width: 100%; 
-    height: auto; 
+    height: 100%; 
     z-index: -1;  
 }  
 .text-of-video{
     position: absolute;
-    top: 30%;  
+    top: 35%;  
     left: 50%; 
     transform: translate(-50%, -50%); 
-    color: white; /* Text color */  
+    color: #e1efe6; /* Text color */  
     font-size: 5vw;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */  
-    padding: 4%; /* Padding around text */  
+    background-color: #160c28c8; /* Semi-transparent background */ 
+    border-radius: 15%; 
+    padding-bottom: 8%; /* Padding around text */  
     z-index: 1; /* Higher z-index to overlap video */ 
     width: 80%;
-    height: 50%;
+    height: 40%;
+    margin-bottom: 10%;
 }
 
 .tag{
@@ -76,15 +83,15 @@ body::-webkit-scrollbar {
     padding: 2%;
     width: 50vw;
     text-align: center;
-    background-color: rgba(255, 228, 196, 0.66);
-    box-shadow: 5px 5px rgba(173, 216, 230, 0.615);
+    background-color: #efcb6893;
+    box-shadow: 5px 5px #aeb7b39a;
     border-radius: 15px; /* Rounded edges */
     transition: background-color 1s, box-shadow 1s; 
 }
 
 .section-Container:hover{
-    background-color: rgb(231, 208, 179); 
-    box-shadow: 10px 10px rgb(40, 106, 128);
+    background-color: #efcb68;
+    box-shadow: 8px 8px #aeb7b3;
 }
 
 /*for input -- when clicked */
@@ -126,21 +133,25 @@ input:not(:checked) + .tag + .content {
     
     
     .inner-containter{
-        border: none;
+        border: 2px solid #849981;
         display: flex;
         position: absolute;
         z-index: 1;
-        top: 80%;  
+        top: 70%;  
         left: 50%;
         transform: translate(-50%, -50%); 
         padding: 3%;
-        flex-direction: row;
+        flex-direction: column;
+        gap: 3%;
         width: 80vw;
         align-content: center;
         
     }
     
-    .video-container {   
+    .video-container { 
+         
+        width: 100%;
+        height: 100%; 
         display: flex;
         position: relative;  
         text-align: center;  
@@ -148,7 +159,7 @@ input:not(:checked) + .tag + .content {
     }  
     .video-container video {  
         width: 100%; 
-        height: auto; 
+        height: 100%; 
         z-index: -1;  
     }  
     .text-of-video{
@@ -156,16 +167,20 @@ input:not(:checked) + .tag + .content {
         top: 30%;  
         left: 50%; 
         transform: translate(-50%, -50%); 
-        color: white; /* Text color */  
-        font-size: 4vw;
-        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */  
+        color: #dbe9ef; /* Text color */  
+        font-size: 7.8vw;
+        background-color: #493b2a64; /* Semi-transparent background */  
         padding: 4%; /* Padding around text */  
         z-index: 1; /* Higher z-index to overlap video */ 
         width: 80%;
         height: 40%;
     }
-    
+    .content , .tag{
+        align-self: center;
+        margin: 3%;
+    }
     .tag{
+        background-color: #7b6d8daf;
         display: block;
         font-size: 1.5vw;
         color: white!important;
@@ -179,17 +194,19 @@ input:not(:checked) + .tag + .content {
         
     }
     
-    .section-Container{ 
+    .section-Container{
+        align-self: center;
+        margin: 2%; 
         padding: 2%;
         width: 50vw;
         text-align: center;
-        background-color: rgba(12, 8, 3, 0.505);
+        background-color: #593f628a;
         box-shadow: 5px 5px rgba(173, 216, 230, 0);
         border-radius: 5px; /* Rounded edges */
     }
     
     .section-Container:hover{
-         background-color: rgba(12, 8, 3, 0.505);
+        background-color: #593f628a;
         box-shadow: 5px 5px rgba(173, 216, 230, 0);
     }/* Ensure that both tag and content are shown */
     
@@ -197,6 +214,7 @@ input:not(:checked) + .tag + .content {
         display: none; /* Hide the checkbox */
     }
     input:checked + .tag {
+        background-color: #7b6d8daf;
         display: block;
         animation: fadeIn 1s;
     }
