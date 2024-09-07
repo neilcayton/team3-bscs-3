@@ -35,7 +35,7 @@ body::-webkit-scrollbar {
     --dl-space-space-sevenunits: 56px;
 }
 
-.home-banner-advanced-analytics {
+.home-banner-advanced-analytics1 {
     width: 100%;
     display: flex;
     align-items: center;
@@ -43,6 +43,20 @@ body::-webkit-scrollbar {
     padding-left: var(--dl-space-space-sevenunits);
     padding-right: var(--dl-space-space-sevenunits);
     flex-direction: row;
+    padding-bottom: var(--dl-space-space-sixunits);
+    justify-content: center;
+    background-color: #EFF0F2;
+}
+
+
+.home-banner-advanced-analytics2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: var(--dl-space-space-sixunits);
+    padding-left: var(--dl-space-space-sevenunits);
+    padding-right: var(--dl-space-space-sevenunits);
+    flex-direction: column;
     padding-bottom: var(--dl-space-space-sixunits);
     justify-content: center;
     background-color: #EFF0F2;
@@ -78,6 +92,7 @@ body::-webkit-scrollbar {
 }
 
 .home-text132 {
+    display:flex;
     font-size: 28px;
     text-align: left;
     line-height: 26px;
@@ -148,6 +163,75 @@ body::-webkit-scrollbar {
 .home-text138:hover {
     color: #000000;
 }
+
+.data-container1 {
+    margin-right: 3%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    /* background-color: #000000; */
+    color: #e4e9f7;
+    margin-bottom: 3%;
+    
+}
+
+
+
+th {
+    background-color: #2c3346;
+    color: #fdf8ff;
+    font-size: .7rem;
+    padding: 1cqw;
+
+}
+
+th:first-child{
+    padding: 1cqw;
+}
+
+th, td {
+    text-align: center; /* Center the text */
+    padding: 2px;
+    /* border: 1px solid #ddd; */
+}
+
+tr{
+    font-size: 0.7rem;
+}
+
+
+
+tr:nth-child(even){
+    background-color: #2c2936;
+}
+
+tr:nth-child(odd){
+    background-color: #2e5b56;
+}
+
+tr:hover {
+    background-color: #464A52;
+ -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+      -moz-box-shadow: 0 6px 6px -6px #0E1119;
+           box-shadow: 0 6px 6px -6px #0E1119;
+ }
+ 
+td:hover {
+   background-color: #61f468;
+   color: #403E10;
+   font-weight: bold;
+   
+   box-shadow: #3c5f22 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+   transform: translate3d(6px, -6px, 0);
+   
+   transition-delay: 0s;
+     transition-duration: 0.4s;
+     transition-property: all;
+   transition-timing-function: line;
+ }
 
 @media (max-width: 768px) {
     .home-banner-advanced-analytics {
