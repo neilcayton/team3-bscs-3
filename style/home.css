@@ -109,7 +109,6 @@ input:checked + .tag {
 }
 input:checked + .tag + .content {
     display: block; 
-    color: rgb(255, 255, 255);
     animation: fadeIn 1s;
 }
 input:not(:checked) + .tag {
