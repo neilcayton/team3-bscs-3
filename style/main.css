@@ -47,6 +47,13 @@ body {
   display: none;
 }
 
+.content-main {
+  margin-top: none;
+  overflow: hidden;
+  border: none;
+  box-sizing: none;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -71,8 +78,8 @@ body {
 
 .navbar .image-text img {
   /* margin-left: 5px; */
-  width: 60px;
-  border-radius: 15%;
+  width: 50px;
+  border-radius: 10%;
 }
 
 .navbar .image {
@@ -93,12 +100,24 @@ body {
 }
 
 .navbar li a .icons {
+  /* align-self: center; */
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 50px;
-  font-size: 20px;
-  margin-left: 10px;
+  min-width: 40px;
+
+  /* margin-left: 10px; */
+  padding: 0;
+}
+
+.navbar li a i {
+  align-self: center;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* min-width: 40px; */
+
+  /* margin-left: 10px; */
   padding: 0;
 }
 
@@ -144,7 +163,7 @@ body {
 .navbar header .image-text {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 10px 20px;
 }
 
 .navbar .image-text .text-header span {
@@ -176,9 +195,10 @@ body {
   right: 20px;
   height: 50px;
   width: 50px;
-  transform: translateY(900%);
+  /* transform: translateY(100%); */
   display: flex;
   background: var(--primary-color);
+  align-self: center;
   align-items: center;
   justify-content: center;
   border-radius: 10%;
@@ -210,22 +230,25 @@ body {
 
 #nav-toggle:checked ~ .navbar .image-text .image img {
   display: block;
-  margin: 0 auto;
+  align-self: center;
+  /* margin: 0 auto; */
   transition: var(--tran-07);
 }
 
 #nav-toggle:checked ~ .navbar .image-text .image {
+  align-items: center;
+  /* padding: 2px; */
   margin: 0 auto;
   transition: var(--tran-07);
 }
 
 #nav-toggle#nav-toggle:checked ~ .navbar {
-  width: 70px;
+  width: 80px;
   transition: var(--tran-07);
 }
 
 #nav-toggle:checked ~ .content {
-  margin-left: 70px;
+  margin-left: 80px;
   width: calc(100% - 70px);
   transition: var(--tran-07);
 }
@@ -251,9 +274,36 @@ body {
   transition: var(--tran-06);
 }
 
+#nav-toggle:checked ~ .navbar li span {
+  display: none;
+}
+
 #nav-toggle {
   display: none;
 }
+
+#nav-toggle:checked ~ .navbar li {
+  display: flex;
+  justify-content: center; /* Center the li horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+#nav-toggle:checked ~ .navbar li a {
+  display: flex;
+  flex-direction: column; /* Stack the icon and text vertically */
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content horizontally */
+  height: 100%;
+  /* padding: 5px 0; */
+  width: auto;
+  margin: 10px;
+}
+
+#nav-toggle:checked ~ .navbar .nav-links {
+    /* padding: 5px 0; */
+    width: auto;
+    margin-top: 10px;
+  }
 
 body,
 .navbar,
@@ -262,6 +312,7 @@ body,
 }
 
 .content {
+  margin-top: 0;
   margin-left: 290px;
   flex: 1;
   width: calc(100% - 290px);
@@ -309,41 +360,41 @@ iframe {
 }
 
 @media (max-width: 768px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        /* padding-bottom: 0; */
-      }
-    
-      .content-main {
-        margin-top: none;
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-      }
-    
-      .content {
-        flex: 1;
-        margin-left: 0;
-        width: 100%;
-        overflow-y: auto;
-      }
-    
-      .navbar {
-        position: static;
-        width: 100%;
-        height: auto;
-        margin: 0;
-        padding: 5px 0;
-      }
-    
-      .navbar .menu-links {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 40px;
-      }
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* padding-bottom: 0; */
+  }
+
+  .content-main {
+    margin-top: none;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .content {
+    flex: 1;
+    margin-left: 0;
+    width: 100%;
+    overflow-y: hidden;
+  }
+
+  .navbar {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 5px 0;
+  }
+
+  .navbar .menu-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+  }
 
   .navbar header,
   .navbar .image-text,
@@ -356,7 +407,6 @@ iframe {
     margin-top: 0;
     width: 100%;
   }
-
 
   .navbar li {
     flex: 1;
