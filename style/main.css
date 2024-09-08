@@ -374,42 +374,64 @@ iframe {
 
 @media (max-width: 768px) {
     .navbar {
-        width: 88px;
+        width: 70px;
         height: 100vh;
         padding: 10px;
-    }
-
-    .navbar .toggle-btn {
         display: flex;
-        position: absolute;
-        top: 10px;
-        right: 20px;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: flex-start; 
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 100;
     }
 
     .navbar ul {
-        display: none;
-        flex-direction: column;
         width: 100%;
-    }
-
-    .navbar.show ul {
+        flex-direction: column;
         display: flex;
+        align-items: center;
     }
 
     .navbar li {
-        height: 50px;
         width: 100%;
+        display: flex;
+        justify-content: center;
         margin-top: 10px;
-        text-align: center;
+        height: 50px;
     }
 
     .navbar li a {
+        display: flex;
         justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        text-align: center;
     }
 
+    .navbar li a .icons {
+        font-size: 20px;
+    }
+
+    .navbar li a .text {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    .content {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+        height: 100vh;
+        overflow-y: auto; 
+        transition: margin-left 0.3s ease, width 0.3s ease;
+        padding: 0; 
+    }
 
     .iframe-container {
-        height: 100vh;
+        height: 100%;
     }
 
     .iframe-container iframe {
@@ -417,11 +439,12 @@ iframe {
         min-height: 300px;
     }
 
-    .content {
-        padding-left: 88px;
+    #nav-toggle:checked ~ .navbar {
+        width: 70px;
     }
 
-    #nav-toggle:checked ~ .navbar ul {
-        display: flex;
+    #nav-toggle:checked ~ .content {
+        margin-left: 70px;
+        width: calc(100% - 70px);
     }
 }
