@@ -19,19 +19,67 @@ This repository contains the source code for the **Team 3** static webpage. The 
 
 ```bash
 Team3_Website/
+│   README.md
 │
-├── index.html              # Main HTML file
-├── /style
-│   ├── main.css            # Primary stylesheet for the webpage
-├── /images
-│   ├── Team3-logo.png      # Logo of Team 3
-│   ├── SDG-logo.png        # SDG logo used in various sections
-├── /html
-│   ├── target-and-indicators.html   # HTML file for Target and Indicators section
-│   ├── progress-and-info.html       # HTML file for Progress and Information section
-│   ├── article.html                 # HTML file for the Articles section
-├── README.md               # This README file
-└── .gitignore              # Gitignore file
+├───.idea
+│       .gitignore
+│       modules.xml
+│       team3-bscs-3.iml
+│       vcs.xml
+│
+├───.vscode
+│       settings.json
+│
+├───html
+│       about-us.html
+│       article.html
+│       history.html
+│       home.html
+│       main.html
+│       progress-and-info.html
+│       statistics.html
+│       target-and-indicators.html
+│
+├───images
+│   │   demoBg.jpg
+│   │   fb-logo.png
+│   │   goal-11.png
+│   │   larger-sdg.png
+│   │   SDG-logo.png
+│   │   slu-logo.svg
+│   │   Team3-logo.png
+│   │   vision-logo.png
+│   │
+│   ├───article_page
+│   │       art-1.png
+│   │       art-2.jpg
+│   │       art-3.png
+│   │       art-4.jpg
+│   │       art-5.jpg
+│   │
+│   ├───solutions
+│   │       disaster-impact.jpeg
+│   │       sustainable-transport.jpg
+│   │       sustainable-urbanization.jpg
+│   │       universal-housing.jpg
+│   │
+│   └───statistics
+│           global-population.svg
+│           table-global.svg
+│
+├───style
+│       about-us.css
+│       article.css
+│       footer.css
+│       home.css
+│       main.css
+│       progress-and-info.css
+│       statistics.css
+│       style.css
+│       target-indicators.css
+│
+└───videos
+        city.mp4
 ```
 
 ## Features
