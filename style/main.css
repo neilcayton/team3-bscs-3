@@ -69,7 +69,7 @@ body {
 .navbar .text {
     user-select: none;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 250;
     transition: var(--tran-04);
     white-space: nowrap;
     opacity: 1;
@@ -212,7 +212,7 @@ body {
 }
 
 .navbar .image-text .text-header span{
-    margin-left: 20px;
+    margin-left: 50px;
     display: flex;
     flex-direction: column;
     font-size: 1.5rem;
@@ -236,6 +236,7 @@ body {
 }
 
 .navbar .toggle-btn {
+    margin-top: 30px;
     position: absolute;
     right: 20px;
     height: 50px;
@@ -254,50 +255,58 @@ body {
 
 
 .navbar .menu-bar {
-    height: calc(100% - 50px);
+    margin-top: 30PX;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 
 #nav-toggle:checked ~ .navbar .image-text {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px 3px;
+    transition: var(--tran-07);
 }
 
 #nav-toggle:checked ~ .navbar .image-text .text-header span {
     display: none;
 }
+
 #nav-toggle:checked ~ .navbar .image-text .image img {
     display: block;
     margin: 0 auto;
+    transition: var(--tran-07);
 }
-
 
 #nav-toggle:checked ~ .navbar .image-text .image {
     margin: 0 auto;
+    transition: var(--tran-07);
 }
 
 #nav-toggle#nav-toggle:checked ~ .navbar {
     width: 70px;
+    transition: var(--tran-07);
 }
 
 #nav-toggle:checked ~ .content {
     margin-left: 70px;
     width: calc(100% - 70px);
+    transition: var(--tran-07);
 }
 
 #nav-toggle:not(:checked) ~ .navbar {
     width: 290px;
+    transition: var(--tran-07);
 }
 
 #nav-toggle:not(:checked) ~ .content {
     margin-left: 290px;
     width: calc(100% - 290px);
+    transition: var(--tran-07);
 }
-
 
 #nav-toggle:checked ~ .navbar .text {
     opacity: 0;
@@ -334,7 +343,6 @@ body, .navbar, .content {
 
 .section-container {
     /* display: flex; */
-
     flex: 1;
     min-height: 100%;
     display: flex;
@@ -374,77 +382,121 @@ iframe {
 
 @media (max-width: 768px) {
     .navbar {
-        width: 70px;
+        width: 88px;
         height: 100vh;
         padding: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        justify-content: flex-start; 
-        position: fixed;
-        left: 0;
-        top: 0;
-        z-index: 100;
+        overflow: hidden;
+        transition: width 0.3s ease, opacity 0.3s ease;
     }
 
-    .navbar ul {
-        width: 100%;
+     .navbar ul {
+        height: auto;
         flex-direction: column;
-        display: flex;
-        align-items: center;
+        width: 100%;
+        transition: height 0.3s ease;
+        padding-left: 0; /
     }
 
     .navbar li {
-        width: 100%;
         display: flex;
-        justify-content: center;
-        margin-top: 10px;
+        align-items: center;
         height: 50px;
+        width: 100%;
+        margin-top: 10px;
+        text-align: left; 
+        transition: opacity 0.3s ease, width 0.3s ease; 
+        white-space: nowrap; 
     }
 
     .navbar li a {
         display: flex;
+        align-items: center; 
+        justify-content: flex-start; 
+        gap: 10px; 
+        width: 100%;
+        text-align: left; 
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        white-space: nowrap; 
+    }
+
+
+    .navbar li a .icon {
+        width: 24px; 
+        height: 24px; 
+    }
+
+
+    #nav-toggle:checked ~ .navbar .image-text .text-header {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease;
+    }
+
+    #nav-toggle:not(:checked) ~ .navbar .image-text .text-header {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s ease; 
+    }
+
+    #nav-toggle:checked ~ .navbar ul li .text {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    #nav-toggle:not(:checked) ~ .navbar ul li .text {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    #nav-toggle:checked ~ .navbar .image-text {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
-        padding: 0;
         width: 100%;
-        text-align: center;
+        padding: 4px 2px;
+        overflow: hidden;
+        opacity: 1;
+        transition: opacity 0.3s ease;
     }
 
-    .navbar li a .icons {
-        font-size: 20px;
+    #nav-toggle:not(:checked) ~ .navbar .image-text {
+        opacity: 1;
+        transition: opacity 0.3s ease;
     }
 
-    .navbar li a .text {
-        font-size: 12px;
-        margin-top: 5px;
+    #nav-toggle:checked ~ .navbar .image-text .text-header span {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
     }
 
-    .content {
-        margin-left: 70px;
-        width: calc(100% - 70px);
-        height: 100vh;
-        overflow-y: auto; 
-        transition: margin-left 0.3s ease, width 0.3s ease;
-        padding: 0; 
+    #nav-toggle:checked ~ .navbar .image-text .image {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    .navbar .toggle-btn {
+        display: flex;
+        position: absolute;
+        top: 10px;
+        right: 20px;
     }
 
-    .iframe-container {
-        height: 100%;
-    }
-
-    .iframe-container iframe {
-        height: auto;
-        min-height: 300px;
-    }
-
-    #nav-toggle:checked ~ .navbar {
-        width: 70px;
+    #nav-toggle:not(:checked) ~ .content {
+        margin-left: 290px;
+        width: calc(100% - 290px);
     }
 
     #nav-toggle:checked ~ .content {
         margin-left: 70px;
         width: calc(100% - 70px);
     }
+
+    #nav-toggle {
+        display: none;
+    }
 }
+
+
