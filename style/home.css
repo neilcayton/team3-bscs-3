@@ -168,16 +168,16 @@ input:not(:checked) + .tag + .content {
     .text-of-video{
         position: absolute;
         font-weight: bold;
-        top: 25%;  
+        top: 20%;  
         left: 50%; 
         transform: translate(-50%, -50%); 
         color: #dbe9ef; /* Text color */  
-        font-size: 7.6vw;
+        font-size: 5.6vw;
         background-color: #493b2a64; /* Semi-transparent background */  
         padding: 4%; /* Padding around text */  
         z-index: 1; /* Higher z-index to overlap video */ 
         width: 80%;
-        height: 45%;
+        height: 35%;
     }
     .content , .tag{
         align-self: center;
@@ -200,9 +200,9 @@ input:not(:checked) + .tag + .content {
     
     .section-Container{
         align-self: center;
-        margin: 2%; 
+        margin:2%; 
         padding: 2%;
-        width: 60vw;
+        width: 80vw;
         text-align: center;
         background-color: #593f628a;
         box-shadow: 5px 5px rgba(173, 216, 230, 0);
@@ -287,7 +287,7 @@ input:not(:checked) + .tag + .content {
         left: 50%; 
         transform: translate(-50%, -50%); 
         color: #dbe9ef; /* Text color */  
-        font-size: 8.3vw;
+        font-size: 6.3vw;
         background-color: #493b2a64; /* Semi-transparent background */  
         padding: 4%; /* Padding around text */  
         z-index: 1; /* Higher z-index to overlap video */ 
@@ -301,7 +301,7 @@ input:not(:checked) + .tag + .content {
     .tag{
         background-color: #7b6d8daf;
         display: block;
-        font-size: 3.3vw;
+        font-size: 2.3vw;
         color: white!important;
         cursor: none;
     }
@@ -309,7 +309,7 @@ input:not(:checked) + .tag + .content {
     .content{
         display: none;
         color: white!important;
-        font-size: 3.3vw;
+        font-size: 2.5vw;
         font-weight: lighter;
     }
     
