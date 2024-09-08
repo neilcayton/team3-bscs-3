@@ -8,7 +8,7 @@ body, html {
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: transparent !important; 
+    background-color: #160c28;
     font-family: Arial, sans-serif;
 }
 
@@ -17,18 +17,21 @@ html::-webkit-scrollbar {
 }
 
 .target-card {
-    border: 1px solid #0e0a0a;
-    border-radius: 8px;
+    border: 1ch solid #efcb68;
+    border-radius: 8ch;
     width: 100%;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    background-color: bisque;
+    background-color: #e1efe6;
     margin-bottom: 20px;
     padding: 20px;
 }
 
 .card-body {
     padding: 20px;
+}
+.goal-number{
+    font-size: 4.5vw;
 }
 
 .goal-header {
@@ -39,6 +42,7 @@ html::-webkit-scrollbar {
 }
 
 .goal-image {
+    border-radius: 2ch;
     width: 100%;
     height: 30vw;
     max-width: none;
@@ -48,7 +52,7 @@ html::-webkit-scrollbar {
 
 .goal-text {
     margin: 0;
-    font-size: 18px;
+    font-size: 3vw;
     font-weight: bold;
     text-align: center;
 }
@@ -64,6 +68,7 @@ html::-webkit-scrollbar {
 .progress-content {
     display: none;
     padding: 5%;
+    font-size: 2vw;
     border-top: 1px solid #ddd;
     background-color: #f9f9f9;
     opacity: 0;
@@ -91,7 +96,7 @@ html::-webkit-scrollbar {
 .progress-button {
     display: block;
     cursor: pointer;
-    background-color: #007bff;
+    background-color: #000411;
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -123,6 +128,17 @@ html::-webkit-scrollbar {
 }
 
 @media screen and (max-width: 768px){
+    body{
+        background-color: #a5c4d4;
+    }
+    .target-card{
+        border: 1px solid #493b2a;
+        background-color: #7b6d8d;
+    }
+    .progress-button{
+        background-color: #8499b1;
+    }
+  
     .row{
         display: flex;
         flex-direction: column;
@@ -131,6 +147,7 @@ html::-webkit-scrollbar {
         margin-bottom: 1%;
         
     }
+    
     .goal-image {
         width: 100%;
         height: 50vw;
