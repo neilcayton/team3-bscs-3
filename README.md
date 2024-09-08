@@ -14,6 +14,7 @@ This repository contains the source code for the **Team 3** static webpage. The 
 - [How to Use](#how-to-use)
 - [Technologies Used](#technologies-used)
 - [Credits](#credits)
+- [Contributors](#contributors)
 
 ## Project Structure
 
@@ -116,4 +117,13 @@ Team3_Website/
 - **Team 3:** For the design and development of the webpage content.
 - **SDG Logos:** For the icons and logos used throughout the page.
 
+## Contributors
+
+> ARAGONA, HANS FREDRICK
+
+> MODELO, ALEXX IVAN
+
+> PALACIO, MELMAR
+
+> URBIZTONDO, KARL JASPER
 
