@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+
 body,html{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins' , sans-serif;
     margin: 0;
     box-sizing: border-box;
     width: 100%;
@@ -53,18 +56,19 @@ body::-webkit-scrollbar {
 }  
 .text-of-video{
     position: absolute;
-    top: 35%;  
+    top: 35%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
-    color: #e1efe6; /* Text color */  
-    font-size: 5vw;
-    background-color: #160c28c8; /* Semi-transparent background */ 
-    border-radius: 15%; 
-    padding-bottom: 8%; /* Padding around text */  
-    z-index: 1; /* Higher z-index to overlap video */ 
+    color: #e1efe6; 
+    font-size: 4.0vw;
+    background-color: rgba(22, 12, 40, 0.8); 
+    border-radius: 54px; 
+    padding: 10px 20px; 
+    z-index: 1; 
     width: 80%;
-    height: 40%;
-    margin-bottom: 10%;
+    box-sizing: border-box; 
+    text-align: center; 
+    user-select: none;
 }
 
 .tag{
@@ -74,7 +78,7 @@ body::-webkit-scrollbar {
 }
 
 .content{
-    font-size: 1vw;
+    font-size: 1.2vw;
     color: black;
     display:none;
 }
@@ -83,7 +87,7 @@ body::-webkit-scrollbar {
     padding: 2%;
     width: 50vw;
     text-align: center;
-    background-color: #efcb6893;
+    background-color: #e4c67465;
     box-shadow: 5px 5px #aeb7b39a;
     border-radius: 15px; /* Rounded edges */
     transition: background-color 1s, box-shadow 1s; 
@@ -105,10 +109,9 @@ input:checked + .tag {
 }
 input:checked + .tag + .content {
     display: block; 
-    color: rgb(12, 11, 104);
+    color: rgb(255, 255, 255);
     animation: fadeIn 1s;
 }
-
 input:not(:checked) + .tag {
 display: block;
 animation: fadeIn 1s;
@@ -117,6 +120,8 @@ input:not(:checked) + .tag + .content {
     display: none;
     animation: fadeIn 1s;
 }
+
+
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
@@ -133,7 +138,6 @@ input:not(:checked) + .tag + .content {
     
     
     .inner-containter{
-        border: 2px solid #849981;
         display: flex;
         position: absolute;
         z-index: 1;
@@ -164,16 +168,17 @@ input:not(:checked) + .tag + .content {
     }  
     .text-of-video{
         position: absolute;
-        top: 30%;  
+        font-weight: bold;
+        top: 25%;  
         left: 50%; 
         transform: translate(-50%, -50%); 
         color: #dbe9ef; /* Text color */  
-        font-size: 7.8vw;
+        font-size: 7.6vw;
         background-color: #493b2a64; /* Semi-transparent background */  
         padding: 4%; /* Padding around text */  
         z-index: 1; /* Higher z-index to overlap video */ 
         width: 80%;
-        height: 40%;
+        height: 45%;
     }
     .content , .tag{
         align-self: center;
@@ -190,19 +195,19 @@ input:not(:checked) + .tag + .content {
     .content{
         display: none;
         color: white!important;
-        font-size: 1vw;
-        
+        font-size: 2.3vw;
+        font-weight: lighter;
     }
     
     .section-Container{
         align-self: center;
         margin: 2%; 
         padding: 2%;
-        width: 50vw;
+        width: 60vw;
         text-align: center;
         background-color: #593f628a;
         box-shadow: 5px 5px rgba(173, 216, 230, 0);
-        border-radius: 5px; /* Rounded edges */
+        border-radius: 25px; /* Rounded edges */
     }
     
     .section-Container:hover{
@@ -217,6 +222,7 @@ input:not(:checked) + .tag + .content {
         background-color: #7b6d8daf;
         display: block;
         animation: fadeIn 1s;
+        border-radius: 15px;
     }
     
      input:checked + .tag + .content {
@@ -228,6 +234,122 @@ input:not(:checked) + .tag + .content {
         input:not(:checked) + .tag {
         display: block;
         animation: fadeIn 1s;
+        border-radius: 15px;
+        }
+        input:not(:checked) + .tag + .content {
+            display: none;
+            animation: fadeIn 1s;
+        }
+
+    
+}
+
+@media   screen and  (max-width: 320px) {
+    
+    .main-container{
+        display: flex;
+        flex-direction: column;
+    }
+     
+    
+    .inner-containter{
+        display: flex;
+        position: absolute;
+        z-index: 1;
+        top: 70%;  
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        padding: 3%;
+        flex-direction: column;
+        gap: 3%;
+        width: 80vw;
+        align-content: center;
+        
+    }
+    
+    .video-container { 
+         
+        width: 100%;
+        height: 100%; 
+        display: flex;
+        position: relative;  
+        text-align: center;  
+    
+    }  
+    .video-container video {  
+        width: 100%; 
+        height: 100%; 
+        z-index: -1;  
+    }  
+    .text-of-video{
+        position: absolute;
+        font-weight: bold;
+        top: 20%;  
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        color: #dbe9ef; /* Text color */  
+        font-size: 8.3vw;
+        background-color: #493b2a64; /* Semi-transparent background */  
+        padding: 4%; /* Padding around text */  
+        z-index: 1; /* Higher z-index to overlap video */ 
+        width: 80%;
+        height: 35%;
+    }
+    .content , .tag{
+        align-self: center;
+        margin: 3%;
+    }
+    .tag{
+        background-color: #7b6d8daf;
+        display: block;
+        font-size: 3.3vw;
+        color: white!important;
+        cursor: none;
+    }
+    
+    .content{
+        display: none;
+        color: white!important;
+        font-size: 3.3vw;
+        font-weight: lighter;
+    }
+    
+    .section-Container{
+        align-self: center;
+        margin: 2%; 
+        padding: 2%;
+        width: 60vw;
+        text-align: center;
+        background-color: #593f628a;
+        box-shadow: 5px 5px rgba(173, 216, 230, 0);
+        border-radius: 25px; /* Rounded edges */
+    }
+    
+    .section-Container:hover{
+        background-color: #593f628a;
+        box-shadow: 5px 5px rgba(173, 216, 230, 0);
+    }/* Ensure that both tag and content are shown */
+    
+    input{
+        display: none; /* Hide the checkbox */
+    }
+    input:checked + .tag {
+        background-color: #7b6d8daf;
+        display: block;
+        animation: fadeIn 1s;
+        border-radius: 15px;
+    }
+    
+     input:checked + .tag + .content {
+         display: block; 
+         color: white;
+         animation: fadeIn 1s;
+    }
+        
+        input:not(:checked) + .tag {
+        display: block;
+        animation: fadeIn 1s;
+        border-radius: 15px;
         }
         input:not(:checked) + .tag + .content {
             display: none;
