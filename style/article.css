@@ -175,7 +175,7 @@ html {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 425px) {
   .home-our-story {
     padding: var(--dl-space-space-unit);
   }

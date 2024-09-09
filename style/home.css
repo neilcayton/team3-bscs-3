@@ -126,7 +126,7 @@ input:not(:checked) + .tag + .content {
     100% { opacity: 1; }
 }
 
-@media   screen and  (max-width: 768px) {
+@media   screen and  (max-width: 425px) {
     
     .main-container{
         display: flex;

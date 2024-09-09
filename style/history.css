@@ -65,7 +65,7 @@ input:checked +  .content div:last-child{
     color:#160c28;
 
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
     body{
         background-color: #a5c4d4;
     }
