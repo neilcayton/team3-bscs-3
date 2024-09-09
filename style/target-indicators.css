@@ -6,6 +6,9 @@
     --scroll-width: 10px;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
 
 
 body, html {
@@ -18,7 +21,6 @@ body, html {
     overflow-y: auto;
 }
 .title{
-    background-color: none;
     font-size: 3vw;
     color: #160C28;
     -webkit-text-fill-color: #EFCB68;
