@@ -6,6 +6,9 @@
     --scroll-width: 10px;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
 
 
 body, html {
